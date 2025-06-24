@@ -13,12 +13,12 @@
 
 theme: jekyll-agency
 
-url    : "" # the base hostname & protocol for your site, e.g. http://example.com
+url    : "fhdsa.org" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
-title      : Your Awesome Website
-email      : your-email@example.com #this is also the email contact forms will go to
-description: "Site description"
+title      : Flint Hills DSA
+email      : chapter@fhdsa.org #this is also the email contact forms will go to
+description: "The officla site for the Flint Hills Chapter of Democratic Socialists of America "
 author     : Your Name
 # logo:     #optional, defaults to site title
   # path: assets\img\clients\creative-market.jpg
