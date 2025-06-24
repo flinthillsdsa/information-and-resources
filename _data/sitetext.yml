@@ -40,7 +40,7 @@ en: &DEFAULT_EN
   about:
     title: "About Us"
     text: "our story"
-    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
+    body: "The Flint Hills Chapter of Democratic Socialists of America seeks to facilitate the transition to a truly democratic and socialist society, one in which the means and resources of production are democratically and socially controlled. The Chapter is organized primarily to promote social welfare."
     section: about
 
   team:
