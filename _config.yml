@@ -20,10 +20,10 @@ title      : Flint Hills DSA
 email      : chapter@fhdsa.org #this is also the email contact forms will go to
 description: "The officla site for the Flint Hills Chapter of Democratic Socialists of America "
 author     : Your Name
-logo       :     #optional, defaults to site title
-           path: assets\img\clients\fhdsalogo.png
-           height: 60 #height in px, defaults to 52px
-
+logo:
+  path  : "/assets/img/fhdsalogo.png"
+  height: 60
+  
 locale: "en-US" # See available languages in _data/sitetext.yml
 
 analytics:
