@@ -6,10 +6,10 @@ gem "logger"
 gem "base64"
 
 group :jekyll_plugins do
-  - jekyll-remote-theme
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+  gem "jekyll-remote-theme"
+  gem "jekyll-feed"
+  gem "jekyll-sitemap"
+  gem "jekyll-seo-tag"
 end
 
 # Windows and JRuby does not include zoneinfo files
