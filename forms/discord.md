@@ -1,18 +1,49 @@
 ---
 layout: page
-title: "Discord"
+title: "Join the Flint Hills DSA Discord Community"
 background: grey
 ---
 
 <div class="row">
   <div class="col-lg-12 text-center">
-    <h2 class="section-heading text-uppercase">Contact Us</h2>
-    <h3 class="section-subheading text-muted">Get in touch with Flint Hills DSA</h3>
+    <h2 class="section-heading text-uppercase">Join Our Discord</h2>
+    <h3 class="section-subheading text-muted">Connect, Organize, and Build Power Together</h3>
   </div>
 </div>
 
 <div class="row justify-content-center">
   <div class="col-lg-8">
+    <div class="mb-4">
+      <p>Our Discord server is where Flint Hills DSA members and supporters come together for:</p>
+      
+      <ul>
+        <li>Real-time organizing discussions and coordination</li>
+        <li>Working group channels for focused project collaboration</li>
+        <li>Social chat and community building</li>
+        <li>Event planning and quick updates</li>
+        <li>Resource sharing and mutual aid coordination</li>
+        <li>Political education discussions and book clubs</li>
+      </ul>
+
+      <h4><strong>What to expect</strong></h4>
+      <p>Our Discord follows our chapter's code of conduct and commitment to creating an inclusive, respectful space for all participants. We have channels for both serious organizing work and casual conversation.</p>
+
+      <h4><strong>Who Can Join</strong></h4>
+      <ul>
+        <li>DSA members (any chapter)</li>
+        <li>Prospective members interested in democratic socialism</li>
+        <li>Community allies who support our organizing goals</li>
+        <li>Event participants and mailing list subscribers</li>
+      </ul>
+
+      <h4><strong>Getting Started</strong></h4>
+      <p>After submitting this form, a chapter member will review your request and send you a Discord invite within 48 hours. Please check your email (including spam folder) for the invitation link.</p>
+
+      <p>Questions? Contact us at <a href="mailto:chapter@fhdsa.org">chapter@fhdsa.org</a></p>
+
+      <p><em>Building working-class power requires strong community connections. Join us in creating the change our region needs!</em></p>
+    </div>
+
     <style>
     /* Force Action Network forms into single column layout */
     #can_embed_form.can_float.can_768 {
@@ -64,7 +95,7 @@ background: grey
     </style>
 
     <link href='https://actionnetwork.org/css/style-embed-whitelabel-v3.css' rel='stylesheet' type='text/css' />
-    <script src='https://actionnetwork.org/widgets/v5/form/contact-us-173?format=js&source=widget'></script>
-    <div id='can-form-area-contact-us-173' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>
+    <script src='https://actionnetwork.org/widgets/v5/form/join-our-discord-3?format=js&source=widget'></script>
+    <div id='can-form-area-join-our-discord-3' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>
   </div>
 </div>
