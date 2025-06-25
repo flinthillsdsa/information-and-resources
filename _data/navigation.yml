@@ -13,6 +13,8 @@ en: &DEFAULT_EN
   nav:
     - title: "About"
       section: about
+    - title: "Updates"
+      section: portfolio
     - title: "Leadership"
       section: team
     - title: "Contact"
