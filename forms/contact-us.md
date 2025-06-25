@@ -4,10 +4,16 @@ title: "Contact Us"
 background: grey
 ---
 
-<div class="col-lg-12 text-center">
-	<h2 class="section-heading text-uppercase">Contact Us</h2>
-	<h3 class="section-subheading text-muted">Get in touch with Flint Hills DSA</h3>
-</div>
+<section class="page-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Contact Us</h2>
+        <h3 class="section-subheading text-muted">Get in touch with Flint Hills DSA</h3>
+      </div>
+    </div>
+  </div>
+</section>
 
 <style>
 /* Force Action Network forms into single column layout */
