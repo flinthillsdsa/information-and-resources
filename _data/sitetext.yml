@@ -17,8 +17,8 @@ en: &DEFAULT_EN
     buttonlink: "contact"
 
   portfolio:
-    title: "Portfolio"
-    text: "Lorem ipsum dolor sit amet consectetur."
+    title: "New and Updates"
+    #text: "Lorem ipsum dolor sit amet consectetur."
     section: portfolio
     closebutton: "Close"
 
