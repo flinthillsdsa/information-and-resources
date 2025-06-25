@@ -11,8 +11,8 @@
 # -----------------
 en: &DEFAULT_EN
   header:
-    title: Democratic Socialists of America
     text: Flint Hills
+    title: Democratic Socialists of America
     button: Become a Member
     buttonlink: "concatct"
 
