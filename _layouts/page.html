@@ -9,8 +9,20 @@ document.getElementById("page-top").className="bg-light";
 </script>
 {% endif %}
 
-<section class="page-section">
-  <div class="container" id="pagecontainer" style="min-height: 60vh; padding-bottom: 100px;">
-    {{ content }}
-  </div>
-</section>
+<div class="container" id="pagecontainer" style="min-height: calc(100vh - 200px); padding-top: 150px; padding-bottom: 150px;">
+{{ content }}
+</div>
+
+<script>
+// Override the footer positioning for forms pages
+document.addEventListener("DOMContentLoaded", function() {
+  var footer = document.getElementById("footer");
+  if (footer) {
+    footer.style.position = "relative";
+    footer.style.bottom = "auto";
+    footer.style.left = "auto";
+    footer.style.right = "auto";
+    footer.style.width = "auto";
+  }
+});
+</script>
