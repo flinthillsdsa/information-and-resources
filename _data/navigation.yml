@@ -17,6 +17,8 @@ en: &DEFAULT_EN
       section: team
     - title: "Contact"
       section: contact
+    - title: "Join"
+      url: "/forms/membership"
 
 
 en-001: #English (World)
