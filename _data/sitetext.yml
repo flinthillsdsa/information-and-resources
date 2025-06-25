@@ -26,7 +26,7 @@ en: &DEFAULT_EN
     title: "About Us"
     text: "our story"
     body: |
-      <div style="text-align: left;">
+      <div style="text-align: left; max-width: 90%; margin: 0 auto;">
         <h3>Flint Hills Chapter of Democratic Socialists of America</h3>
 
         <p>The Flint Hills Chapter of Democratic Socialists of America seeks to facilitate the transition to a truly democratic and socialist society, one in which the means and resources of production are democratically and socially controlled. The Chapter is organized primarily to promote social welfare.</p>
