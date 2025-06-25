@@ -17,10 +17,10 @@ en: &DEFAULT_EN
       section: portfolio
     - title: "Leadership"
       section: team
-    - title: "Contact"
+    - title: "Get Involved"
       section: contact
-    - title: "Join"
-      url: "/forms/membership"
+    - title: "Contact"
+      url: "/forms/contact-us"
 
 
 en-001: #English (World)
