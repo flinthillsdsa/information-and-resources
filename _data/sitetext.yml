@@ -29,41 +29,49 @@ en: &DEFAULT_EN
     section: about
 
   team:
-    title: "OUR AMAZING TEAM"
-    text: "Lorem ipsum dolor sit amet consectetur."
-    subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
+    title: "Steering Committee"
+    text: "The Chapter is led by a group of local volunteers living in and around Manhattan, KS."
+    #subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
     section: team
     people:
-      - name: "Kay Garland"
-        role: "Lead Designer"
-        image: assets/img/team/500x500.jpg
+      - name: "Noah (he/they)"
+        role: "Co-chair"
+        image: assets/img/team/noah.jpg
+        bio:   |
+            **Noah** is a father who spends most his time working, spending time with his family, and traveling. Noah is an alumni of Kansas State University and a founding member of Flint Hills DSA. He is currently serving his second term as co-chair.
+      - name: "Peter (he/they)"
+        role: "Co-chair"
+        image: assets/img/team/peter.jpg
+        bio:  |
+          A lifelong Kansas resident, **Peter** is a biomedical engineer and technician whose socialist awakening came about shortly after the March For Our Lives movement in 2018. When not pushing for Palestinian advocacy or pro-humanity work, Peter is a homebody and a tinkerer at heart, with a soft spot for TTRPGs.
+      - name: "Steve (he/him)"
+        role: "Treasurer"
+        image: assets/img/team/placeholder.png
+      - name: "Beccah (they/them)"
+        role: "Co-secretary"
+        image: assets/img/team/beccah.png
+        bio:  |
+          **Beccah** is a Marxist-Leninist organizer with a focus on anti-fascist education, labor solidarity, and intersectional-feminism. They have a passion for helping their community,  providing mutual aid however possible and spreading knowledge about anti-capitalism. Outside of activism, they enjoy quiet time with their wife and cats, art, and the occasional D&D session.
         social:
-          - url: https://twitter.com
-            icon: fab fa-twitter
-          - url: https://facebook.com
+          - url: https://www.facebook.com/RebaccahABromley/
             icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
-      - name: "Larry Parker"
-        role: "Lead Marketer"
-        image: assets/img/team/2.jpg
+      - name: "Al (they/them)"
+        role: "Co-secretary"
+        image: assets/img/team/placeholder.png
+      - name: "Derron (they/he)"
+        role: "Membership Coordinator"
+        image: assets/img/team/derron.png
+        bio:  |
+          **Derron** is a vegan Marxist-Leninist organizer from Ohio. They are currently pursuing a PhD in adult learning and leadership at Kansas State University focusing on epistemogloy of adult learning. As an activist and educator they work to dismantle oppressive systems with the ultimate goal to drive positive change towards collective liberation, centering the liberation of individuals and communities who have been systematically denied access to life-sustaining resources and basic human dignity. They take their lead from folks like Frantz Fanon, James Baldwin, bell hooks, Paulo Freire, Myles Horton, Walter Mignolo, Maria Lugones, Aníbal Quijano, Audre Lorde, Angela Davis, and Toni Morrison, to guide their dialectical praxis in liberatory education. In their free time, you can find Derron at their plot at the Manhattan Community Gardens, volunteering, crafting, learning languages, writing, and escaping the realities of capitalism through reading fantasy fiction.
         social:
-          - url: https://twitter.com
-            icon: fab fa-twitter
-          - url: https://facebook.com
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
-      - name: "Diana Perterson"
-        role: "Lead Developer"
-        image: assets/img/team/500x500.jpg
-        social:
-          - url: https://twitter.com
-            icon: fab fa-twitter
-          - url: https://facebook.com
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
+          - url: https://www.dialecticalpraxis.com
+            icon: fas fa-circle-user
+          - url: https://bsky.app/profile/dialecticalpraxis.com
+            icon: fab fa-bluesky
+          - url: https://www.instagram.com/derronstephen
+            icon: fab fa-instagram
+          - url: https://www.linkedin.com/in/derronborders/
+            icon: fab fa-linkedin
 
   contact:
     title: "Contact Us"
