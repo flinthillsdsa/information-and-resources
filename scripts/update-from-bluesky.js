@@ -63,32 +63,27 @@ function getBlueSkyUrl(uri, handle) {
 }
 
 // Helper function to extract and format embedded content
-function formatEmbeddedContent(embed) {
+function formatEmbeddedContent(embed, postText) {
   let embeddedContent = '';
   
   if (!embed) return embeddedContent;
   
-  // Handle images - simple markdown format
+  // Handle images - use simple HTML since markdown images aren't showing
   if (embed.images && embed.images.length > 0) {
     embed.images.forEach((image, index) => {
       if (image.fullsize) {
-        // Simple markdown image
-        embeddedContent += `\n![Image from post](${image.fullsize})\n`;
+        // Simple HTML img tag
+        embeddedContent += `\n<img src="${image.fullsize}" alt="Image from Bluesky post" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">\n`;
       }
     });
   }
   
-  // Handle external links (website cards) - make them actual clickable links
+  // Handle external links (website cards) - use the full URL from embed data
   if (embed.external) {
-    embeddedContent += `\n[${embed.external.title || 'External Link'}](${embed.external.uri})\n`;
+    embeddedContent += `\n[${embed.external.title || embed.external.uri}](${embed.external.uri})\n`;
     
     if (embed.external.description) {
       embeddedContent += `\n${embed.external.description}\n`;
-    }
-    
-    // Add thumbnail if available
-    if (embed.external.thumb) {
-      embeddedContent += `\n![Link preview](${embed.external.thumb})\n`;
     }
   }
   
@@ -102,18 +97,8 @@ function formatEmbeddedContent(embed) {
 
 // Helper function to extract links from post text and make them clickable
 function extractLinksFromText(text) {
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-  const links = text.match(urlRegex);
-  
-  if (!links) return '';
-  
-  let linkContent = '';
-  links.forEach(link => {
-    // Make URLs clickable markdown links
-    linkContent += `\n[${link}](${link})\n`;
-  });
-  
-  return linkContent;
+  // Don't extract links if they're already handled by embeds
+  return '';
 }
 
 // Helper function to generate Jekyll front matter and content
@@ -128,7 +113,7 @@ function generateJekyllContent(posts, type, originalContent, handle) {
     const postUrl = getBlueSkyUrl(post.uri, handle);
     
     // Get embedded content (images, links, etc.)
-    const embeddedContent = formatEmbeddedContent(post.embed);
+    const embeddedContent = formatEmbeddedContent(post.embed, post.text);
     
     // Extract any additional links from the text that aren't in embeds
     const textLinks = post.embed ? '' : extractLinksFromText(post.text);
