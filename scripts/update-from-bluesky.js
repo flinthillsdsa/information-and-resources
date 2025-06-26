@@ -78,12 +78,12 @@ function formatEmbeddedContent(embed) {
     });
   }
   
-  // Handle external links (website cards)
+  // Handle external links (website cards) - make them actual clickable links
   if (embed.external) {
-    embeddedContent += `\n**🔗 [${embed.external.title || 'External Link'}](${embed.external.uri})**\n`;
+    embeddedContent += `\n[${embed.external.title || 'External Link'}](${embed.external.uri})\n`;
     
     if (embed.external.description) {
-      embeddedContent += `\n*${embed.external.description}*\n`;
+      embeddedContent += `\n${embed.external.description}\n`;
     }
     
     // Add thumbnail if available
@@ -100,7 +100,7 @@ function formatEmbeddedContent(embed) {
   return embeddedContent;
 }
 
-// Helper function to extract links from post text
+// Helper function to extract links from post text and make them clickable
 function extractLinksFromText(text) {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
   const links = text.match(urlRegex);
@@ -109,8 +109,8 @@ function extractLinksFromText(text) {
   
   let linkContent = '';
   links.forEach(link => {
-    // Don't duplicate links that are already in embeds
-    linkContent += `\n🔗 [${link}](${link})\n`;
+    // Make URLs clickable markdown links
+    linkContent += `\n[${link}](${link})\n`;
   });
   
   return linkContent;
@@ -137,7 +137,6 @@ function generateJekyllContent(posts, type, originalContent, handle) {
 
 ${cleanedText}
 ${embeddedContent}${textLinks}
-[View on Bluesky](${postUrl})
 
 ---`;
   }).join('\n\n');
