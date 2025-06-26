@@ -68,17 +68,17 @@ function formatEmbeddedContent(embed) {
   
   if (!embed) return embeddedContent;
   
-  // Handle images - use markdown syntax for better Jekyll compatibility
+  // Handle images - simple markdown format
   if (embed.images && embed.images.length > 0) {
-    embed.images.forEach(image => {
+    embed.images.forEach((image, index) => {
       if (image.fullsize) {
-        // Use HTML with inline CSS for size control
-        embeddedContent += `\n<img src="${image.fullsize}" alt="${image.alt || 'Image from Bluesky post'}" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">\n`;
+        // Simple markdown image
+        embeddedContent += `\n![Image from post](${image.fullsize})\n`;
       }
     });
   }
   
-  // Handle external links (website cards) - simplified for Jekyll
+  // Handle external links (website cards)
   if (embed.external) {
     embeddedContent += `\n**🔗 [${embed.external.title || 'External Link'}](${embed.external.uri})**\n`;
     
@@ -88,7 +88,7 @@ function formatEmbeddedContent(embed) {
     
     // Add thumbnail if available
     if (embed.external.thumb) {
-      embeddedContent += `\n<img src="${embed.external.thumb}" alt="Link preview" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 4px;">\n`;
+      embeddedContent += `\n![Link preview](${embed.external.thumb})\n`;
     }
   }
   
