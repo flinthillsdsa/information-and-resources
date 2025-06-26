@@ -51,9 +51,9 @@ jobs:
           git config --local user.name "FHDSA Content Bot"
           git fetch origin master
           git add _portfolio/2-announcements.md _portfolio/3-news.md
-          echo "Files to be committed:"
-          git status --cached
-          echo "Changes in files:"
+          echo "Files staged for commit:"
+          git diff --name-only --cached
+          echo "Changes being committed:"
           git diff --cached
           git commit -m "🤖 Update content from Bluesky posts"
           git rebase origin/master || git rebase --skip || true
