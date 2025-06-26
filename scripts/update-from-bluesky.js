@@ -45,7 +45,7 @@ function formatDate(dateString) {
   });
 }
 
-// Helper function to clean hashtags and facet links from text
+// Helper function to clean hashtags and replace "here:" with inline links
 function cleanText(text, facets) {
   let cleanedText = text
     .replace(/#news\b/gi, '')
@@ -54,8 +54,20 @@ function cleanText(text, facets) {
     .trim();
   
   // Remove truncated URLs that end with ellipsis
-  // This pattern matches: domain.com/path… or domain.com/path...
   cleanedText = cleanedText.replace(/\b[\w.-]+\.[\w.-]+\/[\w.-]*[…\.]{1,3}/g, '').trim();
+  
+  // Replace "here:" with inline link if we have facets
+  if (facets && facets.length > 0) {
+    facets.forEach(facet => {
+      facet.features.forEach(feature => {
+        if (feature.$type === 'app.bsky.richtext.facet#link') {
+          // Replace "here:" or "here " with the actual link
+          cleanedText = cleanedText.replace(/\bhere:\s*/gi, `[here](${feature.uri})`);
+          cleanedText = cleanedText.replace(/\bhere\s+$/gi, `[here](${feature.uri})`);
+        }
+      });
+    });
+  }
   
   // Clean up any extra spaces that might be left
   cleanedText = cleanedText.replace(/\s+/g, ' ').trim();
@@ -73,9 +85,10 @@ function getBlueSkyUrl(uri, handle) {
 
 // Helper function to extract and format embedded content
 function formatEmbeddedContent(embed, facets, postText, userDid) {
-  let embeddedContent = '';
+  let images = '';
+  let links = '';
   
-  // Handle images from embed
+  // Handle images from embed - collect them first
   if (embed && embed.images && embed.images.length > 0) {
     embed.images.forEach((image, index) => {
       let imageUrl = null;
@@ -92,7 +105,7 @@ function formatEmbeddedContent(embed, facets, postText, userDid) {
       
       if (imageUrl) {
         console.log(`Adding image: ${imageUrl}`);
-        embeddedContent += `\n<img src="${imageUrl}" alt="${image.alt || 'Image from Bluesky post'}" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">\n`;
+        images += `\n<div align="center">\n<img src="${imageUrl}" alt="${image.alt || 'Image from Bluesky post'}" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">\n</div>\n`;
       } else {
         console.log('Image found but no URL could be constructed:', JSON.stringify(image, null, 2));
       }
@@ -101,10 +114,10 @@ function formatEmbeddedContent(embed, facets, postText, userDid) {
   
   // Handle external links from embed (link-only posts)
   if (embed && embed.external) {
-    embeddedContent += `\n[${embed.external.title || embed.external.uri}](${embed.external.uri})\n`;
+    links += `\n[${embed.external.title || embed.external.uri}](${embed.external.uri})\n`;
     
     if (embed.external.description) {
-      embeddedContent += `\n${embed.external.description}\n`;
+      links += `\n${embed.external.description}\n`;
     }
   }
   
@@ -123,38 +136,32 @@ function formatEmbeddedContent(embed, facets, postText, userDid) {
         }
         
         if (imageUrl) {
-          embeddedContent += `\n<img src="${imageUrl}" alt="${image.alt || 'Image from Bluesky post'}" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">\n`;
+          images += `\n<div align="center">\n<img src="${imageUrl}" alt="${image.alt || 'Image from Bluesky post'}" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">\n</div>\n`;
         }
       });
     }
     
     // Handle external link from the media part
     if (embed.media && embed.media.external) {
-      embeddedContent += `\n[${embed.media.external.title || embed.media.external.uri}](${embed.media.external.uri})\n`;
+      links += `\n[${embed.media.external.title || embed.media.external.uri}](${embed.media.external.uri})\n`;
       
       if (embed.media.external.description) {
-        embeddedContent += `\n${embed.media.external.description}\n`;
+        links += `\n${embed.media.external.description}\n`;
       }
     }
   }
   
   // Handle links from facets (for posts with images + text links)
-  if (facets && facets.length > 0) {
-    facets.forEach(facet => {
-      facet.features.forEach(feature => {
-        if (feature.$type === 'app.bsky.richtext.facet#link') {
-          embeddedContent += `\n[${feature.uri}](${feature.uri})\n`;
-        }
-      });
-    });
-  }
+  // Note: These are now handled inline in cleanText function
+  // This section is kept for external embeds only
   
   // Handle quote posts (reposts with comment)
   if (embed && embed.record && embed.record.value && embed.record.value.text) {
-    embeddedContent += `\n> ${embed.record.value.text}\n`;
+    links += `\n> ${embed.record.value.text}\n`;
   }
   
-  return embeddedContent;
+  // Return images first, then links
+  return { images, links };
 }
 
 // Helper function to extract links from post text and make them clickable
@@ -185,15 +192,14 @@ function generateJekyllContent(posts, type, originalContent, handle, userDid) {
     const cleanedText = cleanText(post.text, post.facets);
     
     // Get embedded content (images, links, etc.)
-    const embeddedContent = formatEmbeddedContent(post.embed, post.facets, post.text, userDid);
+    const embedded = formatEmbeddedContent(post.embed, post.facets, post.text, userDid);
     
     // Extract any additional links from the text that aren't in embeds
     const textLinks = post.embed ? '' : extractLinksFromText(post.text);
     
     return `### ${formatDate(post.createdAt)}
-
-${cleanedText}
-${embeddedContent}${textLinks}
+${embedded.images}
+${cleanedText}${embedded.links}${textLinks}
 
 ---`;
   }).join('\n\n');
