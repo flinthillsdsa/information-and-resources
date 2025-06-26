@@ -46,6 +46,27 @@ jobs:
           git add _portfolio/2-announcements.md _portfolio/3-news.md
           git commit -m "🤖 Update content from Bluesky posts"
           git push origin master
+          
+      - name: Wait for Pages to detect changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          echo "Waiting 30 seconds for GitHub Pages to detect changes..."
+          sleep 30
+          
+      - name: Trigger Pages rebuild
+        if: steps.git-check.outputs.changes == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              await github.rest.repos.requestPagesBuild({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+              });
+              console.log('Successfully triggered Pages rebuild');
+            } catch (error) {
+              console.log('Pages rebuild trigger failed, but this is usually okay:', error.message);
+            }
         
       - name: No changes detected
         if: steps.git-check.outputs.changes != 'true'
