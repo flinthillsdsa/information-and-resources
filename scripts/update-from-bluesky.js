@@ -63,13 +63,11 @@ function getBlueSkyUrl(uri, handle) {
 }
 
 // Helper function to extract and format embedded content
-function formatEmbeddedContent(embed, postText) {
+function formatEmbeddedContent(embed, facets, postText) {
   let embeddedContent = '';
   
-  if (!embed) return embeddedContent;
-  
-  // Handle images - use simple HTML since markdown images aren't showing
-  if (embed.images && embed.images.length > 0) {
+  // Handle images from embed
+  if (embed && embed.images && embed.images.length > 0) {
     embed.images.forEach((image, index) => {
       if (image.fullsize) {
         // Simple HTML img tag
@@ -78,8 +76,8 @@ function formatEmbeddedContent(embed, postText) {
     });
   }
   
-  // Handle external links (website cards) - use the full URL from embed data
-  if (embed.external) {
+  // Handle external links from embed
+  if (embed && embed.external) {
     embeddedContent += `\n[${embed.external.title || embed.external.uri}](${embed.external.uri})\n`;
     
     if (embed.external.description) {
@@ -87,8 +85,20 @@ function formatEmbeddedContent(embed, postText) {
     }
   }
   
+  // Handle links from facets (this is where links are when there are also images)
+  if (facets && facets.length > 0) {
+    facets.forEach(facet => {
+      facet.features.forEach(feature => {
+        if (feature.$type === 'app.bsky.richtext.facet#link') {
+          const linkText = postText.substring(facet.index.byteStart, facet.index.byteEnd);
+          embeddedContent += `\n[${feature.uri}](${feature.uri})\n`;
+        }
+      });
+    });
+  }
+  
   // Handle quote posts (reposts with comment)
-  if (embed.record && embed.record.value && embed.record.value.text) {
+  if (embed && embed.record && embed.record.value && embed.record.value.text) {
     embeddedContent += `\n> ${embed.record.value.text}\n`;
   }
   
@@ -97,8 +107,19 @@ function formatEmbeddedContent(embed, postText) {
 
 // Helper function to extract links from post text and make them clickable
 function extractLinksFromText(text) {
-  // Don't extract links if they're already handled by embeds
-  return '';
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const links = text.match(urlRegex);
+  
+  if (!links) return '';
+  
+  let linkContent = '';
+  links.forEach(link => {
+    // Clean up the link (remove trailing punctuation that might get caught)
+    const cleanLink = link.replace(/[.,;!?)]+$/, '');
+    linkContent += `\n[${cleanLink}](${cleanLink})\n`;
+  });
+  
+  return linkContent;
 }
 
 // Helper function to generate Jekyll front matter and content
@@ -113,7 +134,7 @@ function generateJekyllContent(posts, type, originalContent, handle) {
     const postUrl = getBlueSkyUrl(post.uri, handle);
     
     // Get embedded content (images, links, etc.)
-    const embeddedContent = formatEmbeddedContent(post.embed, post.text);
+    const embeddedContent = formatEmbeddedContent(post.embed, post.facets, post.text);
     
     // Extract any additional links from the text that aren't in embeds
     const textLinks = post.embed ? '' : extractLinksFromText(post.text);
@@ -176,7 +197,8 @@ async function fetchAndUpdateContent() {
         text: text,
         createdAt: item.post.record.createdAt,
         uri: item.post.uri,
-        embed: item.post.record.embed
+        embed: item.post.record.embed,
+        facets: item.post.record.facets // Add facets for links in text
       };
 
       // Debug: Log embed data for posts with hashtags
@@ -184,6 +206,7 @@ async function fetchAndUpdateContent() {
         console.log('Found relevant post:', {
           text: text.substring(0, 80) + '...',
           hasEmbed: !!postData.embed,
+          hasFacets: !!(postData.facets && postData.facets.length > 0),
           embedDetails: postData.embed ? {
             type: postData.embed.$type,
             hasImages: !!(postData.embed.images && postData.embed.images.length > 0),
@@ -191,7 +214,11 @@ async function fetchAndUpdateContent() {
             hasExternal: !!postData.embed.external,
             externalUrl: postData.embed.external ? postData.embed.external.uri : null,
             hasRecord: !!postData.embed.record
-          } : 'No embed data'
+          } : 'No embed data',
+          facetsDetails: postData.facets ? postData.facets.map(facet => ({
+            features: facet.features.map(f => f.$type),
+            text: text.substring(facet.index.byteStart, facet.index.byteEnd)
+          })) : 'No facets'
         });
       }
 
