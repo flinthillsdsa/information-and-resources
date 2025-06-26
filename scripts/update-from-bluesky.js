@@ -68,37 +68,33 @@ function formatEmbeddedContent(embed) {
   
   if (!embed) return embeddedContent;
   
-  // Handle images
+  // Handle images - use markdown syntax for better Jekyll compatibility
   if (embed.images && embed.images.length > 0) {
     embed.images.forEach(image => {
       if (image.fullsize) {
-        embeddedContent += `\n<img src="${image.fullsize}" alt="${image.alt || 'Image from Bluesky post'}" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px;">\n`;
+        // Use HTML with inline CSS for size control
+        embeddedContent += `\n<img src="${image.fullsize}" alt="${image.alt || 'Image from Bluesky post'}" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">\n`;
       }
     });
   }
   
-  // Handle external links (website cards)
+  // Handle external links (website cards) - simplified for Jekyll
   if (embed.external) {
-    embeddedContent += `\n<div style="border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin: 10px 0; background: #f9f9f9;">`;
-    
-    if (embed.external.thumb) {
-      embeddedContent += `\n<img src="${embed.external.thumb}" alt="Link preview" style="max-width: 300px; width: 100%; height: auto; margin-bottom: 10px; border-radius: 4px;">`;
-    }
-    
-    embeddedContent += `\n<h4 style="margin: 0 0 5px 0;"><a href="${embed.external.uri}" target="_blank" rel="noopener">${embed.external.title || 'External Link'}</a></h4>`;
+    embeddedContent += `\n**🔗 [${embed.external.title || 'External Link'}](${embed.external.uri})**\n`;
     
     if (embed.external.description) {
-      embeddedContent += `\n<p style="margin: 5px 0; color: #666; font-size: 0.9em;">${embed.external.description}</p>`;
+      embeddedContent += `\n*${embed.external.description}*\n`;
     }
     
-    embeddedContent += `\n</div>\n`;
+    // Add thumbnail if available
+    if (embed.external.thumb) {
+      embeddedContent += `\n<img src="${embed.external.thumb}" alt="Link preview" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 4px;">\n`;
+    }
   }
   
   // Handle quote posts (reposts with comment)
   if (embed.record && embed.record.value && embed.record.value.text) {
-    embeddedContent += `\n<blockquote style="border-left: 3px solid #1DA1F2; padding-left: 15px; margin: 10px 0; font-style: italic; color: #555;">`;
-    embeddedContent += `\n${embed.record.value.text}`;
-    embeddedContent += `\n</blockquote>\n`;
+    embeddedContent += `\n> ${embed.record.value.text}\n`;
   }
   
   return embeddedContent;
@@ -151,6 +147,15 @@ ${embeddedContent}${textLinks}
 ${frontMatter}
 ---
 
+*Last updated: ${new Date().toLocaleString('en-US', { 
+  timeZone: 'America/Chicago',
+  year: 'numeric',
+  month: 'long', 
+  day: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit'
+})}*
+
 ${content}`;
 }
 
@@ -192,15 +197,18 @@ async function fetchAndUpdateContent() {
 
       // Debug: Log embed data for posts with hashtags
       if (text.toLowerCase().includes('#news') || text.toLowerCase().includes('#announcement') || text.toLowerCase().includes('#announce')) {
-        if (postData.embed) {
-          console.log('Found post with embed:', {
-            text: text.substring(0, 50) + '...',
-            embedType: postData.embed.$type || 'unknown',
+        console.log('Found relevant post:', {
+          text: text.substring(0, 80) + '...',
+          hasEmbed: !!postData.embed,
+          embedDetails: postData.embed ? {
+            type: postData.embed.$type,
             hasImages: !!(postData.embed.images && postData.embed.images.length > 0),
+            imageCount: postData.embed.images ? postData.embed.images.length : 0,
             hasExternal: !!postData.embed.external,
+            externalUrl: postData.embed.external ? postData.embed.external.uri : null,
             hasRecord: !!postData.embed.record
-          });
-        }
+          } : 'No embed data'
+        });
       }
 
       if (text.toLowerCase().includes('#news')) {
