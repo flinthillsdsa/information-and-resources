@@ -110,7 +110,7 @@ async function fetchAndUpdateContent() {
 
     // Read existing files to preserve front matter
     const newsFilePath = '_portfolio/3-news.md';
-    const announcementsFilePath = '_portfolio/2-anouncements.md';
+    const announcementsFilePath = '_portfolio/2-announcements.md';
 
     let existingNewsContent = '';
     let existingAnnouncementsContent = '';
