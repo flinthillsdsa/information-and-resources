@@ -70,13 +70,12 @@ function formatEmbeddedContent(embed, facets, postText) {
   if (embed && embed.images && embed.images.length > 0) {
     embed.images.forEach((image, index) => {
       if (image.fullsize) {
-        // Simple HTML img tag
         embeddedContent += `\n<img src="${image.fullsize}" alt="Image from Bluesky post" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">\n`;
       }
     });
   }
   
-  // Handle external links from embed
+  // Handle external links from embed (link-only posts)
   if (embed && embed.external) {
     embeddedContent += `\n[${embed.external.title || embed.external.uri}](${embed.external.uri})\n`;
     
@@ -85,12 +84,32 @@ function formatEmbeddedContent(embed, facets, postText) {
     }
   }
   
-  // Handle links from facets (this is where links are when there are also images)
+  // Handle recordWithMedia embeds (images + external link combined)
+  if (embed && embed.$type === 'app.bsky.embed.recordWithMedia') {
+    // Handle images from the media part
+    if (embed.media && embed.media.images) {
+      embed.media.images.forEach((image, index) => {
+        if (image.fullsize) {
+          embeddedContent += `\n<img src="${image.fullsize}" alt="Image from Bluesky post" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">\n`;
+        }
+      });
+    }
+    
+    // Handle external link from the media part
+    if (embed.media && embed.media.external) {
+      embeddedContent += `\n[${embed.media.external.title || embed.media.external.uri}](${embed.media.external.uri})\n`;
+      
+      if (embed.media.external.description) {
+        embeddedContent += `\n${embed.media.external.description}\n`;
+      }
+    }
+  }
+  
+  // Handle links from facets (for posts with images + text links)
   if (facets && facets.length > 0) {
     facets.forEach(facet => {
       facet.features.forEach(feature => {
         if (feature.$type === 'app.bsky.richtext.facet#link') {
-          const linkText = postText.substring(facet.index.byteStart, facet.index.byteEnd);
           embeddedContent += `\n[${feature.uri}](${feature.uri})\n`;
         }
       });
