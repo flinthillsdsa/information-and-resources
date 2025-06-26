@@ -45,13 +45,18 @@ function formatDate(dateString) {
   });
 }
 
-// Helper function to clean hashtags from text
-function cleanText(text) {
-  return text
+// Helper function to clean hashtags and facet links from text
+function cleanText(text, facets) {
+  let cleanedText = text
     .replace(/#news\b/gi, '')
     .replace(/#announcement\b/gi, '')
     .replace(/#announce\b/gi, '')
     .trim();
+  
+  // Simple approach: remove any URLs that look like truncated links
+  cleanedText = cleanedText.replace(/\b\w+\.\w+\/\w+\.\.\./g, '').trim();
+  
+  return cleanedText;
 }
 
 // Helper function to get Bluesky post URL
@@ -69,8 +74,23 @@ function formatEmbeddedContent(embed, facets, postText) {
   // Handle images from embed
   if (embed && embed.images && embed.images.length > 0) {
     embed.images.forEach((image, index) => {
+      let imageUrl = null;
+      
+      // Handle different image URL formats
       if (image.fullsize) {
-        embeddedContent += `\n<img src="${image.fullsize}" alt="Image from Bluesky post" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">\n`;
+        // Direct URL format (older or processed)
+        imageUrl = image.fullsize;
+      } else if (image.image && image.image.ref && image.image.ref.$link) {
+        // Blob format - construct the CDN URL
+        const blobRef = image.image.ref.$link;
+        imageUrl = `https://cdn.bsky.app/img/feed_fullsize/plain/${blobRef}@jpeg`;
+      }
+      
+      if (imageUrl) {
+        console.log(`Adding image: ${imageUrl}`);
+        embeddedContent += `\n<img src="${imageUrl}" alt="${image.alt || 'Image from Bluesky post'}" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">\n`;
+      } else {
+        console.log('Image found but no URL could be constructed:', JSON.stringify(image, null, 2));
       }
     });
   }
@@ -149,7 +169,7 @@ function generateJekyllContent(posts, type, originalContent, handle) {
   
   // Generate new content
   const content = posts.map(post => {
-    const cleanedText = cleanText(post.text);
+    const cleanedText = cleanText(post.text, post.facets);
     const postUrl = getBlueSkyUrl(post.uri, handle);
     
     // Get embedded content (images, links, etc.)
