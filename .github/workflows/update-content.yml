@@ -10,6 +10,9 @@ on:
 jobs:
   update-content:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
     
     steps:
       - name: Checkout repository
@@ -27,7 +30,7 @@ jobs:
         env:
           BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
-        run: npm run update-content
+        run: npm run update-content-alt
         
       - name: Check for changes
         id: git-check
@@ -39,9 +42,10 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "FHDSA Content Bot"
+          git pull --rebase origin master
           git add _portfolio/2-announcements.md _portfolio/3-news.md
           git commit -m "🤖 Update content from Bluesky posts"
-          git push
+          git push origin master
         
       - name: No changes detected
         if: steps.git-check.outputs.changes != 'true'
