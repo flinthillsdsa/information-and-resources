@@ -53,8 +53,12 @@ function cleanText(text, facets) {
     .replace(/#announce\b/gi, '')
     .trim();
   
-  // Simple approach: remove any URLs that look like truncated links
-  cleanedText = cleanedText.replace(/\b\w+\.\w+\/\w+\.\.\./g, '').trim();
+  // Remove truncated URLs that end with ellipsis
+  // This pattern matches: domain.com/path… or domain.com/path...
+  cleanedText = cleanedText.replace(/\b[\w.-]+\.[\w.-]+\/[\w.-]*[…\.]{1,3}/g, '').trim();
+  
+  // Clean up any extra spaces that might be left
+  cleanedText = cleanedText.replace(/\s+/g, ' ').trim();
   
   return cleanedText;
 }
@@ -71,6 +75,10 @@ function getBlueSkyUrl(uri, handle) {
 function formatEmbeddedContent(embed, facets, postText) {
   let embeddedContent = '';
   
+// Helper function to extract and format embedded content
+function formatEmbeddedContent(embed, facets, postText, userDid) {
+  let embeddedContent = '';
+  
   // Handle images from embed
   if (embed && embed.images && embed.images.length > 0) {
     embed.images.forEach((image, index) => {
@@ -81,9 +89,9 @@ function formatEmbeddedContent(embed, facets, postText) {
         // Direct URL format (older or processed)
         imageUrl = image.fullsize;
       } else if (image.image && image.image.ref && image.image.ref.$link) {
-        // Blob format - construct the CDN URL
+        // Blob format - construct the CDN URL with user DID
         const blobRef = image.image.ref.$link;
-        imageUrl = `https://cdn.bsky.app/img/feed_fullsize/plain/${blobRef}@jpeg`;
+        imageUrl = `https://cdn.bsky.app/img/feed_fullsize/plain/${userDid}/${blobRef}@jpeg`;
       }
       
       if (imageUrl) {
@@ -173,7 +181,7 @@ function generateJekyllContent(posts, type, originalContent, handle) {
     const postUrl = getBlueSkyUrl(post.uri, handle);
     
     // Get embedded content (images, links, etc.)
-    const embeddedContent = formatEmbeddedContent(post.embed, post.facets, post.text);
+    const embeddedContent = formatEmbeddedContent(post.embed, post.facets, post.text, userDid);
     
     // Extract any additional links from the text that aren't in embeds
     const textLinks = post.embed ? '' : extractLinksFromText(post.text);
@@ -221,6 +229,10 @@ async function fetchAndUpdateContent() {
     console.log('Creating session with Bluesky...');
     const session = await createSession(handle, process.env.BLUESKY_APP_PASSWORD);
     console.log('✅ Successfully logged in to Bluesky');
+    
+    // Store the user's DID for image URL construction
+    const userDid = session.did;
+    console.log('User DID:', userDid);
 
     // Get recent posts from your feed
     console.log('Fetching recent posts...');
@@ -316,7 +328,7 @@ date: ${new Date().toISOString().split('T')[0]}
 
     // Update news file
     if (sortedNews.length > 0) {
-      const newNewsContent = generateJekyllContent(sortedNews, 'news', existingNewsContent, handle);
+      const newNewsContent = generateJekyllContent(sortedNews, 'news', existingNewsContent, handle, userDid);
       fs.writeFileSync(newsFilePath, newNewsContent);
       console.log('✅ Updated news file');
     } else {
@@ -325,7 +337,7 @@ date: ${new Date().toISOString().split('T')[0]}
 
     // Update announcements file
     if (sortedAnnouncements.length > 0) {
-      const newAnnouncementsContent = generateJekyllContent(sortedAnnouncements, 'announcements', existingAnnouncementsContent, handle);
+      const newAnnouncementsContent = generateJekyllContent(sortedAnnouncements, 'announcements', existingAnnouncementsContent, handle, userDid);
       fs.writeFileSync(announcementsFilePath, newAnnouncementsContent);
       console.log('✅ Updated announcements file');
     } else {
