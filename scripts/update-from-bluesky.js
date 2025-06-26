@@ -38,10 +38,18 @@ async function getAuthorFeed(accessToken, actor, limit = 50) {
 
 // Helper function to format date
 function formatDate(dateString) {
-  return new Date(dateString).toLocaleDateString('en-US', {
+  const date = new Date(dateString);
+  console.log(`Original date string: ${dateString}, Parsed date: ${date.toISOString()}, Formatted: ${date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
+  })}`);
+  
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'America/Chicago' // Use your local timezone
   });
 }
 
