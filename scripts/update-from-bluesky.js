@@ -1,10 +1,40 @@
-import { BskyAgent } from '@atproto/api';
 import fs from 'fs';
-import path from 'path';
 
-const agent = new BskyAgent({
-  service: 'https://bsky.social'
-});
+// Alternative approach using direct HTTP requests to Bluesky API
+async function createSession(identifier, password) {
+  const response = await fetch('https://bsky.social/xrpc/com.atproto.server.createSession', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      identifier: identifier,
+      password: password,
+    }),
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(`Login failed: ${error.error} - ${error.message}`);
+  }
+
+  return await response.json();
+}
+
+async function getAuthorFeed(accessToken, actor, limit = 50) {
+  const response = await fetch(`https://bsky.social/xrpc/app.bsky.feed.getAuthorFeed?actor=${encodeURIComponent(actor)}&limit=${limit}`, {
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+    },
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(`Failed to fetch feed: ${error.error} - ${error.message}`);
+  }
+
+  return await response.json();
+}
 
 // Helper function to format date
 function formatDate(dateString) {
@@ -27,11 +57,71 @@ function cleanText(text) {
 // Helper function to get Bluesky post URL
 function getBlueSkyUrl(uri, handle) {
   const postId = uri.split('/').pop();
-  return `https://bsky.app/profile/${handle}/post/${postId}`;
+  // Remove @ from handle if present
+  const cleanHandle = handle.startsWith('@') ? handle.substring(1) : handle;
+  return `https://bsky.app/profile/${cleanHandle}/post/${postId}`;
+}
+
+// Helper function to extract and format embedded content
+function formatEmbeddedContent(embed) {
+  let embeddedContent = '';
+  
+  if (!embed) return embeddedContent;
+  
+  // Handle images
+  if (embed.images && embed.images.length > 0) {
+    embed.images.forEach(image => {
+      if (image.fullsize) {
+        embeddedContent += `\n<img src="${image.fullsize}" alt="${image.alt || 'Image from Bluesky post'}" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px;">\n`;
+      }
+    });
+  }
+  
+  // Handle external links (website cards)
+  if (embed.external) {
+    embeddedContent += `\n<div style="border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin: 10px 0; background: #f9f9f9;">`;
+    
+    if (embed.external.thumb) {
+      embeddedContent += `\n<img src="${embed.external.thumb}" alt="Link preview" style="max-width: 300px; width: 100%; height: auto; margin-bottom: 10px; border-radius: 4px;">`;
+    }
+    
+    embeddedContent += `\n<h4 style="margin: 0 0 5px 0;"><a href="${embed.external.uri}" target="_blank" rel="noopener">${embed.external.title || 'External Link'}</a></h4>`;
+    
+    if (embed.external.description) {
+      embeddedContent += `\n<p style="margin: 5px 0; color: #666; font-size: 0.9em;">${embed.external.description}</p>`;
+    }
+    
+    embeddedContent += `\n</div>\n`;
+  }
+  
+  // Handle quote posts (reposts with comment)
+  if (embed.record && embed.record.value && embed.record.value.text) {
+    embeddedContent += `\n<blockquote style="border-left: 3px solid #1DA1F2; padding-left: 15px; margin: 10px 0; font-style: italic; color: #555;">`;
+    embeddedContent += `\n${embed.record.value.text}`;
+    embeddedContent += `\n</blockquote>\n`;
+  }
+  
+  return embeddedContent;
+}
+
+// Helper function to extract links from post text
+function extractLinksFromText(text) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const links = text.match(urlRegex);
+  
+  if (!links) return '';
+  
+  let linkContent = '';
+  links.forEach(link => {
+    // Don't duplicate links that are already in embeds
+    linkContent += `\n🔗 [${link}](${link})\n`;
+  });
+  
+  return linkContent;
 }
 
 // Helper function to generate Jekyll front matter and content
-function generateJekyllContent(posts, type, originalContent) {
+function generateJekyllContent(posts, type, originalContent, handle) {
   // Extract the existing front matter
   const frontMatterMatch = originalContent.match(/^---\n([\s\S]*?)\n---/);
   const frontMatter = frontMatterMatch ? frontMatterMatch[1] : '';
@@ -39,12 +129,18 @@ function generateJekyllContent(posts, type, originalContent) {
   // Generate new content
   const content = posts.map(post => {
     const cleanedText = cleanText(post.text);
-    const postUrl = getBlueSkyUrl(post.uri, process.env.BLUESKY_HANDLE);
+    const postUrl = getBlueSkyUrl(post.uri, handle);
+    
+    // Get embedded content (images, links, etc.)
+    const embeddedContent = formatEmbeddedContent(post.embed);
+    
+    // Extract any additional links from the text that aren't in embeds
+    const textLinks = post.embed ? '' : extractLinksFromText(post.text);
     
     return `### ${formatDate(post.createdAt)}
 
 ${cleanedText}
-
+${embeddedContent}${textLinks}
 [View on Bluesky](${postUrl})
 
 ---`;
@@ -60,26 +156,32 @@ ${content}`;
 
 async function fetchAndUpdateContent() {
   try {
-    // Login to Bluesky
-    console.log('Logging into Bluesky...');
-    await agent.login({
-      identifier: process.env.BLUESKY_HANDLE,
-      password: process.env.BLUESKY_APP_PASSWORD
-    });
+    // Debug environment variables (without exposing sensitive data)
+    console.log('Checking environment variables...');
+    console.log('BLUESKY_HANDLE:', process.env.BLUESKY_HANDLE ? 'Set' : 'Missing');
+    console.log('BLUESKY_APP_PASSWORD:', process.env.BLUESKY_APP_PASSWORD ? 'Set' : 'Missing');
+    
+    // Clean up the handle format
+    let handle = process.env.BLUESKY_HANDLE;
+    if (handle.startsWith('@')) {
+      handle = handle.substring(1);
+    }
+    console.log('Using handle:', handle);
+
+    // Login to Bluesky using direct API
+    console.log('Creating session with Bluesky...');
+    const session = await createSession(handle, process.env.BLUESKY_APP_PASSWORD);
     console.log('✅ Successfully logged in to Bluesky');
 
     // Get recent posts from your feed
     console.log('Fetching recent posts...');
-    const posts = await agent.getAuthorFeed({
-      actor: process.env.BLUESKY_HANDLE,
-      limit: 50
-    });
+    const feedData = await getAuthorFeed(session.accessJwt, handle, 50);
 
     const newsPosts = [];
     const announcementPosts = [];
 
     // Filter posts by hashtags
-    posts.data.feed.forEach(item => {
+    feedData.feed.forEach(item => {
       const text = item.post.record.text;
       const postData = {
         text: text,
@@ -88,11 +190,24 @@ async function fetchAndUpdateContent() {
         embed: item.post.record.embed
       };
 
-      if (text.includes('#news')) {
+      // Debug: Log embed data for posts with hashtags
+      if (text.toLowerCase().includes('#news') || text.toLowerCase().includes('#announcement') || text.toLowerCase().includes('#announce')) {
+        if (postData.embed) {
+          console.log('Found post with embed:', {
+            text: text.substring(0, 50) + '...',
+            embedType: postData.embed.$type || 'unknown',
+            hasImages: !!(postData.embed.images && postData.embed.images.length > 0),
+            hasExternal: !!postData.embed.external,
+            hasRecord: !!postData.embed.record
+          });
+        }
+      }
+
+      if (text.toLowerCase().includes('#news')) {
         newsPosts.push(postData);
       }
       
-      if (text.includes('#announcement') || text.includes('#announce')) {
+      if (text.toLowerCase().includes('#announcement') || text.toLowerCase().includes('#announce')) {
         announcementPosts.push(postData);
       }
     });
@@ -110,7 +225,7 @@ async function fetchAndUpdateContent() {
 
     // Read existing files to preserve front matter
     const newsFilePath = '_portfolio/3-news.md';
-    const announcementsFilePath = '_portfolio/2-announcements.md';
+    const announcementsFilePath = '_portfolio/2-anouncements.md';
 
     let existingNewsContent = '';
     let existingAnnouncementsContent = '';
@@ -143,7 +258,7 @@ date: ${new Date().toISOString().split('T')[0]}
 
     // Update news file
     if (sortedNews.length > 0) {
-      const newNewsContent = generateJekyllContent(sortedNews, 'news', existingNewsContent);
+      const newNewsContent = generateJekyllContent(sortedNews, 'news', existingNewsContent, handle);
       fs.writeFileSync(newsFilePath, newNewsContent);
       console.log('✅ Updated news file');
     } else {
@@ -152,7 +267,7 @@ date: ${new Date().toISOString().split('T')[0]}
 
     // Update announcements file
     if (sortedAnnouncements.length > 0) {
-      const newAnnouncementsContent = generateJekyllContent(sortedAnnouncements, 'announcements', existingAnnouncementsContent);
+      const newAnnouncementsContent = generateJekyllContent(sortedAnnouncements, 'announcements', existingAnnouncementsContent, handle);
       fs.writeFileSync(announcementsFilePath, newAnnouncementsContent);
       console.log('✅ Updated announcements file');
     } else {
@@ -162,7 +277,8 @@ date: ${new Date().toISOString().split('T')[0]}
     console.log('🎉 Content update completed successfully!');
 
   } catch (error) {
-    console.error('❌ Error updating content:', error);
+    console.error('❌ Error updating content:', error.message);
+    console.error('Full error:', error);
     process.exit(1);
   }
 }
