@@ -2,12 +2,15 @@ name: Update Content from Bluesky
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # Every 6 hours
-  workflow_dispatch: # Manual trigger
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  # Allow manual triggering
+  workflow_dispatch:
 
 jobs:
   update-content:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -26,12 +29,20 @@ jobs:
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
         run: npm run update-content
         
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
+        
       - name: Commit and push changes
+        if: steps.git-check.outputs.changes == 'true'
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          if [[ -n $(git status --porcelain) ]]; then
-            git add .
-            git commit -m "🤖 Update content from Bluesky"
-            git push
-          fi
+          git config --local user.name "FHDSA Content Bot"
+          git add _portfolio/2-anouncements.md _portfolio/3-news.md
+          git commit -m "🤖 Update content from Bluesky posts"
+          git push
+        
+      - name: No changes detected
+        if: steps.git-check.outputs.changes != 'true'
+        run: echo "No new content to update"
