@@ -35,16 +35,28 @@ jobs:
       - name: Check for changes
         id: git-check
         run: |
-          git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Found changes in files:"
+            git status --porcelain
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
+          fi
         
       - name: Commit and push changes
         if: steps.git-check.outputs.changes == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "FHDSA Content Bot"
-          git pull --rebase origin master
+          git fetch origin master
           git add _portfolio/2-announcements.md _portfolio/3-news.md
+          echo "Files to be committed:"
+          git status --cached
+          echo "Changes in files:"
+          git diff --cached
           git commit -m "🤖 Update content from Bluesky posts"
+          git rebase origin/master || git rebase --skip || true
           git push origin master
           
       - name: Wait for Pages to detect changes
