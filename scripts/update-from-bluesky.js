@@ -72,10 +72,6 @@ function getBlueSkyUrl(uri, handle) {
 }
 
 // Helper function to extract and format embedded content
-function formatEmbeddedContent(embed, facets, postText) {
-  let embeddedContent = '';
-  
-// Helper function to extract and format embedded content
 function formatEmbeddedContent(embed, facets, postText, userDid) {
   let embeddedContent = '';
   
@@ -117,8 +113,17 @@ function formatEmbeddedContent(embed, facets, postText, userDid) {
     // Handle images from the media part
     if (embed.media && embed.media.images) {
       embed.media.images.forEach((image, index) => {
+        let imageUrl = null;
+        
         if (image.fullsize) {
-          embeddedContent += `\n<img src="${image.fullsize}" alt="Image from Bluesky post" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">\n`;
+          imageUrl = image.fullsize;
+        } else if (image.image && image.image.ref && image.image.ref.$link) {
+          const blobRef = image.image.ref.$link;
+          imageUrl = `https://cdn.bsky.app/img/feed_fullsize/plain/${userDid}/${blobRef}@jpeg`;
+        }
+        
+        if (imageUrl) {
+          embeddedContent += `\n<img src="${imageUrl}" alt="${image.alt || 'Image from Bluesky post'}" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">\n`;
         }
       });
     }
@@ -170,7 +175,7 @@ function extractLinksFromText(text) {
 }
 
 // Helper function to generate Jekyll front matter and content
-function generateJekyllContent(posts, type, originalContent, handle) {
+function generateJekyllContent(posts, type, originalContent, handle, userDid) {
   // Extract the existing front matter
   const frontMatterMatch = originalContent.match(/^---\n([\s\S]*?)\n---/);
   const frontMatter = frontMatterMatch ? frontMatterMatch[1] : '';
@@ -178,7 +183,6 @@ function generateJekyllContent(posts, type, originalContent, handle) {
   // Generate new content
   const content = posts.map(post => {
     const cleanedText = cleanText(post.text, post.facets);
-    const postUrl = getBlueSkyUrl(post.uri, handle);
     
     // Get embedded content (images, links, etc.)
     const embeddedContent = formatEmbeddedContent(post.embed, post.facets, post.text, userDid);
