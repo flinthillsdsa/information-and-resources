@@ -39,7 +39,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "FHDSA Content Bot"
-          git add _portfolio/2-anouncements.md _portfolio/3-news.md
+          git add _portfolio/2-announcements.md _portfolio/3-news.md
           git commit -m "🤖 Update content from Bluesky posts"
           git push
         
