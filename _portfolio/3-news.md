@@ -9,9 +9,9 @@ title: News
 
 ---
 
-*Last updated: June 25, 2025 at 11:16 PM*
+*Last updated: June 25, 2025 at 11:20 PM*
 
-### June 26, 2025
+### June 25, 2025
 
 <div align="center">
 <img src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:5elxm5vmbzp6nysr33oag45t/bafkreih7p6lxywt2tjbuvxmb6j5uxznhh2jcl4x532uzdfo3v3rb5qas5i@jpeg" alt="Photo of South Asian man with his hand in the air waving over a red background with white text that reads Zohran Mamdani a democratic socialits wins nyc mayoral primary dsausa.org/join" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">

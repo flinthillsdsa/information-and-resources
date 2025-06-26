@@ -9,9 +9,9 @@ title: Announcements
 
 ---
 
-*Last updated: June 25, 2025 at 11:16 PM*
+*Last updated: June 25, 2025 at 11:20 PM*
 
-### June 26, 2025
+### June 25, 2025
 
 <div align="center">
 <img src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:5elxm5vmbzp6nysr33oag45t/bafkreicrakvij5okjwiviind4lxmnn6fhupggreyvte24tivzashckkjmu@jpeg" alt="Red flyer with flint hills dsa logo and text in white that says flint hills dsa with white line with black text that reads annual convention, white text over red background reads july 10, 2025 6:00 pm - 8:00 pm, Manhattan Public Library Groesbeck Room" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">
