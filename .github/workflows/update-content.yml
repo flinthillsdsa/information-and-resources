@@ -30,7 +30,7 @@ jobs:
         env:
           BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
-        run: npm run update-content-alt
+        run: npm run update-content
         
       - name: Check for changes
         id: git-check
