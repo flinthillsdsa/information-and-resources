@@ -1,0 +1,11 @@
+{
+  "name": "fhdsa-content-updater",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "update-content": "node scripts/update-from-bluesky.js"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.12.0"
+  }
+}
