@@ -45,7 +45,7 @@ function formatDate(dateString) {
   });
 }
 
-// Helper function to clean hashtags and replace "here:" with inline links
+// Helper function to clean hashtags and replace truncated URLs with links
 function cleanText(text, facets) {
   let cleanedText = text
     .replace(/#news\b/gi, '')
@@ -53,20 +53,35 @@ function cleanText(text, facets) {
     .replace(/#announce\b/gi, '')
     .trim();
   
-  // Remove truncated URLs that end with ellipsis
-  cleanedText = cleanedText.replace(/\b[\w.-]+\.[\w.-]+\/[\w.-]*[…\.]{1,3}/g, '').trim();
-  
-  // Replace "here:" with inline link if we have facets
+  // Handle facet links by replacing truncated text with clickable links
   if (facets && facets.length > 0) {
-    facets.forEach(facet => {
-      facet.features.forEach(feature => {
-        if (feature.$type === 'app.bsky.richtext.facet#link') {
-          // Replace "here:" or "here " with the actual link
-          cleanedText = cleanedText.replace(/\bhere:\s*/gi, `[here](${feature.uri})`);
-          cleanedText = cleanedText.replace(/\bhere\s+$/gi, `[here](${feature.uri})`);
-        }
-      });
+    // Work with the original text for accurate byte positions
+    let workingText = text;
+    
+    // Sort facets by start position in reverse order so we don't mess up indices
+    const linkFacets = facets
+      .filter(facet => facet.features.some(f => f.$type === 'app.bsky.richtext.facet#link'))
+      .sort((a, b) => b.index.byteStart - a.index.byteStart);
+    
+    linkFacets.forEach(facet => {
+      const linkFeature = facet.features.find(f => f.$type === 'app.bsky.richtext.facet#link');
+      if (linkFeature) {
+        // Get the truncated text from the original position
+        const truncatedText = workingText.substring(facet.index.byteStart, facet.index.byteEnd);
+        
+        // Replace the truncated text with a clickable link
+        const before = workingText.substring(0, facet.index.byteStart);
+        const after = workingText.substring(facet.index.byteEnd);
+        workingText = before + `[${truncatedText}](${linkFeature.uri})` + after;
+      }
     });
+    
+    // Now clean the hashtags from the working text
+    cleanedText = workingText
+      .replace(/#news\b/gi, '')
+      .replace(/#announcement\b/gi, '')
+      .replace(/#announce\b/gi, '')
+      .trim();
   }
   
   // Clean up any extra spaces that might be left
