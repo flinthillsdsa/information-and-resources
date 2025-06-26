@@ -1,0 +1,37 @@
+name: Update Content from Bluesky
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Every 6 hours
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  update-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Update content from Bluesky
+        env:
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        run: npm run update-content
+        
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          if [[ -n $(git status --porcelain) ]]; then
+            git add .
+            git commit -m "🤖 Update content from Bluesky"
+            git push
+          fi
