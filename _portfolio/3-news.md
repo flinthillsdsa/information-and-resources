@@ -9,7 +9,13 @@ title: News
 
 ---
 
-*Last updated: June 27, 2025 at 01:21 PM*
+*Last updated: June 27, 2025 at 03:25 PM*
+
+### June 27, 2025
+
+The number of new @demsocialists.bsky.social members has grown each day this past week! Saturday: 81 Sunday: 83 Monday: 91 Tuesday: 481 Wednesday: 867 Live in Manhattan, KS or the surrounding area? Join the movement! [www.fhdsa.org/forms/member...](https://www.fhdsa.org/forms/membership)
+
+---
 
 ### June 25, 2025
 
