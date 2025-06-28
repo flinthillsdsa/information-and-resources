@@ -7,7 +7,7 @@ background: grey
 <div class="row">
   <div class="col-lg-12 text-center">
     <h2 class="section-heading text-uppercase">2025-26 Steering Committee Nominations</h2>
-    <h3 class="section-subheading text-muted">Help us build a our leadership team for the next year!</h3>
+    <h3 class="section-subheading text-muted">Help us build our leadership team for the next year!</h3>
   </div>
 </div>
 
