@@ -9,7 +9,13 @@ title: Announcements
 
 ---
 
-*Last updated: June 28, 2025 at 08:23 PM*
+*Last updated: June 29, 2025 at 01:21 AM*
+
+### June 28, 2025
+
+Our emails from from our custom domain "fhdsa.org" have been going to spam. We changed the default email in @actionnetwork.bsky.social to our @proton.me email address. They should be delivering normally now. Will try to figure out what is going on. #announcements
+
+---
 
 ### June 25, 2025
 
