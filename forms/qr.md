@@ -11,7 +11,7 @@ background: grey
     <h3 class="section-subheading text-muted">Scan the QR Code to Sign in</h3>
   </div>
 </div>
-
+<br>
 <div class="row justify-content-center">
   <div class="col-lg-8">
     <img src="../assets/img/attendance-page-qr-code.png" width="400px" class="img-fluid d-block mx-auto">
