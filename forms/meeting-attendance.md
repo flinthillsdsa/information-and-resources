@@ -67,7 +67,7 @@ background: grey
       margin: 0 auto;
     }
     </style>
-
+<link href='https://actionnetwork.org/css/style-embed-whitelabel-v3.css' rel='stylesheet' type='text/css' /><script src='https://actionnetwork.org/widgets/v5/form/2025-convention-attendance-form?format=js&source=widget'></script><div id='can-form-area-2025-convention-attendance-form' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>
    
   </div>
 </div>
