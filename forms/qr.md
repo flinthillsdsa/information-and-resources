@@ -12,8 +12,8 @@ background: grey
   </div>
 </div>
 
-<div class="row justify-content-center">
+<div class="row text-center">
   <div class="col-lg-8">
-  <img src="../assets/img/attendance-page-qr-code.png" width="400px" align="center"> 
+ <p><img src="../assets/img/attendance-page-qr-code.png" width="400px" align="center"> <p>
   </div>
 </div>
