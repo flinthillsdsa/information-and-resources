@@ -17,38 +17,28 @@ background: grey
 
 ## III.Agenda
 
-- Overview of the Democratic Socialists of America and the Flint Hills Chapter (Noah, 30 minutes)
-  - Bylaws
-  - Steering committee
-  - Committees and working groups
-    - Committees = internal organizing, working groups = organizing and action
-  - Accomplishments over the past year
-- Organizing vs. Mobilizing vs. Action  (Amanda - 10 minutes)
-- 2025-26 Steering Committee Elections (Derron - 10 minutes)
-  - Nominees:
-    - Co-chairs - 
-    - Member coordinators - 
-    - Treasurer - 
-    - Secretary -
-  - Voting
-    - Need a volunteer who has not been nominated
-      - Volunteer 
-    - We will use [RCV123.org](https://www.rcv123.org/home)'s free software to run election.
-- Logo results (Derron, 5 minutes)
-- Governing Documents Revision and Development (Derron, 15 minutes)
-  - Bylaws
-  - Political Framework
-  - Code of Conduct
-  - Democratic Decision Making
-    - Parliamentary Rules
-  - Standard Operating Procedures
-- Open discussion
+### Overview of the Democratic Socialists of America and the Flint Hills Chapter 
+
+### Chapter Actions Overview
+
+### Organizing vs. Mobilizing vs. Action 
+
+### 2025-26 Steering Committee Elections
+ 
+### New Flint Hils Chapter of DSA Logo  
+
+### Governing Documents Revision and Development 
+
+### Open discussion
 
 ## IV. Next Meeting 
+**Date:** 2025-07-24 
 
-** Date:** 2025-07-24 
-** Time:** 6:00 PM CST  
+**Time:** 6:00 PM CDT  
+
 **Location:** Manhattan Public Library Collaboration Space and Classroom / Discord  
 
 ## V. Adjournment
+
+**Time:** 8:00 PM CDT
 
