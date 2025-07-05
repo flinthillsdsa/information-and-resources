@@ -27,7 +27,7 @@ background: grey
 
 **2025-26 Steering Committee Elections**
  
-**New Flint Hils Chapter of DSA Logo**
+**New Flint Hills Chapter of DSA Logo**
 
 **Governing Documents Revision and Development**
 
