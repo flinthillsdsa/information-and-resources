@@ -1,14 +1,7 @@
 ---
-title: "2025 Chapter Convention Agenda"
-type: "meeting-agenda"
-date created: "2025-07-01"
-date modified: "2025-07-01"
-status: "draft"
-author: "Derron Borders"
-tags: ["meeting-agenda", "general-membership", "monthly"]
-version: "1.0"
-related_docs:
- 
+layout: page
+title: "Contact Us"
+background: grey
 ---
 
 # 2025 Chapter Convention Agenda
