@@ -13,9 +13,11 @@ background: grey
 
 ## I. Call to Order
 
-## II. Announcements
+## II. Introductions
 
-## III.Agenda
+## III. Announcements
+
+## IV.Agenda
 
 ### Overview of the Democratic Socialists of America and the Flint Hills Chapter 
 
@@ -31,14 +33,14 @@ background: grey
 
 ### Open discussion
 
-## IV. Next Meeting 
+## V. Next Meeting 
 **Date:** 2025-07-24 
 
 **Time:** 6:00 PM CDT  
 
 **Location:** Manhattan Public Library Collaboration Space and Classroom / Discord  
 
-## V. Adjournment
+## VI. Adjournment
 
 **Time:** 8:00 PM CDT
 
