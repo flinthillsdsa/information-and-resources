@@ -19,17 +19,17 @@ background: grey
 
 ## IV.Agenda
 
-#### Overview of the Democratic Socialists of America and the Flint Hills Chapter 
+**Overview of the Democratic Socialists of America and the Flint Hills Chapter**
 
-#### Chapter Actions Overview
+**Chapter Actions Overview**
 
-#### Organizing vs. Mobilizing vs. Action 
+**Organizing vs. Mobilizing vs. Action** 
 
-#### 2025-26 Steering Committee Elections
+**2025-26 Steering Committee Elections**
  
-#### New Flint Hils Chapter of DSA Logo  
+**New Flint Hils Chapter of DSA Logo**
 
-#### Governing Documents Revision and Development 
+**Governing Documents Revision and Development**
 
 #### Open discussion
 
