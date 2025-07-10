@@ -21,7 +21,7 @@ background: grey
 
 <ul>
 <li>Governing documents – bylaws, resolutions, working‐group charters</li>
-<li>Educational content** – reading lists, study-group guides, workshop slide decks</li>
+<li>Educational content – reading lists, study-group guides, workshop slide decks</li>
 </ul>
 
 <p>Members and active participants of the Flint Hills Chapter of Democratic Socliasts of America have access to additional materials, such as:</p>
