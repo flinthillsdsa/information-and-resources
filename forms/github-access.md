@@ -6,8 +6,8 @@ background: grey
 
 <div class="row">
   <div class="col-lg-12 text-center">
-    <h2 class="section-heading text-uppercase">Access </h2>
-    <h3 class="section-subheading text-muted">Request Access to the Chapter GitHub Organization</h3>
+    <h2 class="section-heading text-uppercase">GitHub Access </h2>
+   
   </div>
 </div>
 
@@ -15,29 +15,34 @@ background: grey
   <div class="col-lg-8">
     <div class="mb-4">
       
-## Purpose
+<h3>Purpose</h3>
 
-Our GitHub space serves as the single source of truth for everything the Flint Hills DSA does and decides. As a member of the public, you will find:
+<p>Our GitHub space serves as the single source of truth for everything the Flint Hills DSA does and decides. As a member of the public, you will find:</p>
 
-- **Governing documents** – bylaws, resolutions, working‐group charters
-- **Educational content** – reading lists, study-group guides, workshop slide decks
+<ul>
+<li>Governing documents – bylaws, resolutions, working‐group charters</li>
+<li>Educational content** – reading lists, study-group guides, workshop slide decks</li>
+</ul>
 
-Members and active participants of the Flint Hills Chapter of Democratic Socliasts of America have access to additional materials, such as:
-- **Meeting materials** – agendas and minutes
-- **Campaign plans & resources** – issue one-pagers, canvassing scripts, data dashboards
-- **Operational SOPs** – onboarding checklists, treasurer procedures, security protocols
+<p>Members and active participants of the Flint Hills Chapter of Democratic Socliasts of America have access to additional materials, such as:</p>
 
-Housing these materials in one place keeps members informed, lowers onboarding friction, and ensures we never lose institutional memory when leadership turns over.
+<ul>
+<li>Meeting materials – agendas and minutes</li>
+<li>Campaign plans & resources – issue one-pagers, canvassing scripts, data dashboards</li>
+<li>Operational SOPs – onboarding checklists, treasurer procedures, security protocols</li>
+</ul>
 
-## Why GitHub?
+<p>Housing these materials in one place keeps members informed, lowers onboarding friction, and ensures we never lose institutional memory when leadership turns over.</p>
 
-1. **Democratic collaboration**. Issues function like mini-proposals. Pull requests help develop a proposal into a draft towards implementation, where anyone can suggest wording, data, or strategy changes; nothing is merged without collective review. Comments, reviews, and reaction emojis turn into a living dialogue—far more traceable than email threads.
-2. **Version history = living history**. Git automatically records who changed what and why. Reverting mistakes or tracing the evolution of a policy is as simple as scrolling the commit log.
-3. **Low-barrier participation**. Members who don’t “speak Git” can still click Edit → Propose changes in the web UI or leave feedback in Issues and Discussions. No special software required.
-4. **Built-in automation**. GitHub Actions can publish our website, back up minutes as PDFs, or remind working groups of stale tasks—all without extra cost.
-5. **Free and open-source ethos**. GitHub Free gives us unlimited public/private repos and collaborators, aligning perfectly with a grassroots budget.
-
-In short, GitHub gives the chapter a transparent, participatory, and future-proof workspace that mirrors our socialist values!
+<h3>Why GitHub?</h3>
+<ul>
+<ol>Democratic collaboration. Issues function like mini-proposals. Pull requests help develop a proposal into a draft towards implementation, where anyone can suggest wording, data, or strategy changes; nothing is merged without collective review. Comments, reviews, and reaction emojis turn into a living dialogue—far more traceable than email threads.</ol>
+<ol>Version history = living history. Git automatically records who changed what and why. Reverting mistakes or tracing the evolution of a policy is as simple as scrolling the commit log.</ol>
+<ol>Low-barrier participation. Members who don’t “speak Git” can still click Edit → Propose changes in the web UI or leave feedback in Issues and Discussions. No special software required.</ol>
+<ol>Built-in automation. GitHub Actions can publish our website, back up minutes as PDFs, or remind working groups of stale tasks—all without extra cost.</ol>
+<ol>Free and open-source ethos. GitHub Free gives us unlimited public/private repos and collaborators, aligning perfectly with a grassroots budget.</ol>
+</ul>
+<p>In short, GitHub gives the chapter a transparent, participatory, and future-proof workspace that mirrors our socialist values!</p>
     </div>
 
     <style>
