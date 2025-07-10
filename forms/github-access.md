@@ -35,13 +35,13 @@ background: grey
 <p>Housing these materials in one place keeps members informed, lowers onboarding friction, and ensures we never lose institutional memory when leadership turns over.</p>
 
 <h3>Why GitHub?</h3>
-<ul>
-<ol>Democratic collaboration. Issues function like mini-proposals. Pull requests help develop a proposal into a draft towards implementation, where anyone can suggest wording, data, or strategy changes; nothing is merged without collective review. Comments, reviews, and reaction emojis turn into a living dialogue—far more traceable than email threads.</ol>
-<ol>Version history = living history. Git automatically records who changed what and why. Reverting mistakes or tracing the evolution of a policy is as simple as scrolling the commit log.</ol>
-<ol>Low-barrier participation. Members who don’t “speak Git” can still click Edit → Propose changes in the web UI or leave feedback in Issues and Discussions. No special software required.</ol>
-<ol>Built-in automation. GitHub Actions can publish our website, back up minutes as PDFs, or remind working groups of stale tasks—all without extra cost.</ol>
-<ol>Free and open-source ethos. GitHub Free gives us unlimited public/private repos and collaborators, aligning perfectly with a grassroots budget.</ol>
-</ul>
+<ol>
+<li>Democratic collaboration. Issues function like mini-proposals. Pull requests help develop a proposal into a draft towards implementation, where anyone can suggest wording, data, or strategy changes; nothing is merged without collective review. Comments, reviews, and reaction emojis turn into a living dialogue—far more traceable than email threads.</li>
+<li>Version history = living history. Git automatically records who changed what and why. Reverting mistakes or tracing the evolution of a policy is as simple as scrolling the commit log.</li>
+<li>Low-barrier participation. Members who don’t “speak Git” can still click Edit → Propose changes in the web UI or leave feedback in Issues and Discussions. No special software required.</li>
+<li>Built-in automation. GitHub Actions can publish our website, back up minutes as PDFs, or remind working groups of stale tasks—all without extra cost.</li>
+<li>Free and open-source ethos. GitHub Free gives us unlimited public/private repos and collaborators, aligning perfectly with a grassroots budget.</li>
+</ol>
 <p>In short, GitHub gives the chapter a transparent, participatory, and future-proof workspace that mirrors our socialist values!</p>
     </div>
 
