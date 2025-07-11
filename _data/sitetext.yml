@@ -91,6 +91,9 @@ en: &DEFAULT_EN
             icon: fab fa-instagram
           - url: https://www.linkedin.com/in/derronborders/
             icon: fab fa-linkedin
+      - name: "Andrew (he/him)"
+        role: "Co-Secretary"
+        image: assets/img/team/placeholder.png
 
 
   contact:
