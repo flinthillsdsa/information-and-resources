@@ -9,7 +9,17 @@ title: Announcements
 
 ---
 
-*Last updated: July 11, 2025 at 01:21 PM*
+*Last updated: July 11, 2025 at 08:19 PM*
+
+### July 11, 2025
+
+<div align="center">
+<img src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:5elxm5vmbzp6nysr33oag45t/bafkreidgcpglumvz2w2sw4vfecorxbtkciosj5rtisbxzysbdqupnr6igy@jpeg" alt="Flint hills Kansas chapter of democratic socialists of America logo with a red rose and sunflower in the center of a cream circle with name of chapter encircling the flowers and a red outer border." style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">
+</div>
+
+We have a new logo! Thanks to local graphic designer, Riley Scott, for the amazing new logo and branding!
+
+---
 
 ### June 28, 2025
 
