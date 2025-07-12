@@ -11,7 +11,7 @@
 # -----------------
 en: &DEFAULT_EN
   header:
-    text: Flint Hills
+    text: Flint Hills, KS
     title: Democratic Socialists of America
     button: Become a Member
     buttonlink: "#contact"
