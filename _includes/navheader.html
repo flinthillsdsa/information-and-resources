@@ -49,6 +49,7 @@
   {% if site.locale and site.locale != "" and site.locale != nil %}
   <header class="masthead">
     <div class="container">
+	<img src="https://www.fhdsa.org/assets/img/fhdsalogo.png" width="300px">
       <div class="intro-text">
 	  {%- if site.data.sitetext[site.locale].header.title -%}
         <div class="intro-lead-in">{{ site.data.sitetext[site.locale].header.title | markdownify }}</div>
