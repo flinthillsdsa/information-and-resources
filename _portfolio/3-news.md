@@ -9,7 +9,17 @@ title: News
 
 ---
 
-*Last updated: July 12, 2025 at 08:25 PM*
+*Last updated: July 13, 2025 at 01:22 AM*
+
+### July 12, 2025
+
+<div align="center">
+<img src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:5elxm5vmbzp6nysr33oag45t/bafkreiatmdd5o2vij3j2xez3wp24tgo3whyv7isy6q6womxbjedkxv652a@jpeg" alt="Speaker wearing graduation regalia and a Palestinian keffiyeh speaks at a podium as people in the background look on." style="max-width: 300px; width: 100%; height: auto; margin: 10px 0; border-radius: 8px; display: block;">
+</div>
+
+Our own Jamen Trojcak spoke at his recent graduation from Manhattan High School about class solidarity, check it out here: [www.youtube.com/live/d3RW9Az...](https://www.youtube.com/live/d3RW9AzUY_g?t=1965s)
+
+---
 
 ### June 27, 2025
 
