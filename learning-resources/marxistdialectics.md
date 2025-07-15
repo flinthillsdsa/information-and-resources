@@ -9,7 +9,7 @@ Caption: A curated list of primary sources on Marxist dialectics and suggested r
 
 This list is in chronological order, but the suggested reading order for beginners, who want to get an understanding of materialist dialectics and deepen it as they go along should read the following primary sources in this order: (20), (18), (11), (13), (10), (17), (16), (15), (19), (7), (4), (8), (1), (6), (3), (9), (12), (2), (5), (14).
 
-<details>
+<details markdown="1">
 <summary>Primary Sources List (click to expand)</summary>
 
  
@@ -61,7 +61,7 @@ This list is in chronological order, but the suggested reading order for beginne
 
 This list is ordered by difficulty, from the most accessible to the most advanced.
 
-<details>
+<details markdown="1">
 <summary>Secondary Sources List (click to expand)</summary>
 
 1. Thalheimer: [Introduction to Dialectical Materialism](https://www.marxists.org/archive/thalheimer/works/diamat/index.htm). Easy read well suited for beginners. Has the advantage of giving an historical approach and including interesting stuff on the Indian and Chinese heritage. He's also trying a deduction as the three basic laws of dialectics as given by Engels.
