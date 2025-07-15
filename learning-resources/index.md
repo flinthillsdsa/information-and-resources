@@ -8,7 +8,7 @@ background: grey
 Click the arrow to expand the list of resources.
 
 <details markdown="1">
-<summary markdown="span">**Archival Materials88</summary>
+<summary markdown="span">**Archival Materials**</summary>
 
 - [Lady Izdihar's Soviet Archive](https://ladyizdihar.com/){:target="_blank"}
    
