@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>fhdsa.org/resources/learning-resources/podcasts/README.html</loc>
-</url>
-<url>
-<loc>fhdsa.org/resources/learning-resources/literature/README.html</loc>
-</url>
-<url>
-<loc>fhdsa.org/resources/learning-resources/primary-resources/README.html</loc>
-</url>
-<url>
-<loc>fhdsa.org/resources/learning-resources/videos/README.html</loc>
-</url>
-<url>
-<loc>fhdsa.org/resources/learning-resources/courses/README.html</loc>
-</url>
-<url>
-<loc>fhdsa.org/resources/learning-resources/README.html</loc>
-</url>
-<url>
-<loc>fhdsa.org/resources/README.html</loc>
-</url>
-<url>
 <loc>fhdsa.org/meeting/agenda.html</loc>
 </url>
 <url>
@@ -47,12 +26,6 @@
 </url>
 <url>
 <loc>fhdsa.org/forms/mailing-list.html</loc>
-</url>
-<url>
-<loc>fhdsa.org/resources/learning-resources/literature/assets/marxistdialectics.html</loc>
-</url>
-<url>
-<loc>fhdsa.org/resources/learning-resources/literature/assets/marxleninbasic.html</loc>
 </url>
 <url>
 <loc>fhdsa.org/forms/membership.html</loc>
