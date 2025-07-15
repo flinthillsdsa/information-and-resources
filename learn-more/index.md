@@ -4,7 +4,7 @@ title: "Learn More"
 background: grey
 ---
 
-## Governing Principles
+## Our Governing Principles
 
 The Flint Hills Chapter of Democratic Socialists of America is guided by socialist principles in everything we do, from generating ideas, making decisions, organizaing, mobilizing, and taking action. The following documents outline the Bylaws, Political Framework, and Code of Conduct for the ogranization and its members.
 
@@ -19,6 +19,11 @@ The Flint Hills Chapter of Democratic Socialists of America is guided by sociali
 </div>
   <br>
  <br>
+
+## Working Groups
+
+
+ 
 ## Education
 
 The Flint Hills Chapter of Democratic Socialists of America value education and believe it is a public good.  We hold the belief that knowledge and information should be accessible and readily available to everyone. If you are interested in learning more about socialism, we are building a living repository of free educational resources to help you learn more about socialism and the many ways we can all work toward collective libreration. 
