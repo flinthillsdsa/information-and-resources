@@ -1,3 +1,5 @@
+<a href="/learn-more">👈 go back</a>
+
 # Bylaws of the Flint Hills Chapter of Democratic Socialists of America
 
 <br>
