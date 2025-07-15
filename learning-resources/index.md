@@ -12,18 +12,16 @@ Click the arrow to expand the list of resources.
 <summary>Archival Materials</summary>
 
 
-[Lady Izdihar's Soviet Archive](https://ladyizdihar.com/)
+<a href="https://ladyizdihar.com/" target="_blank">Lady Izdihar's Soviet Archive</a>
 
    
 </details>
 <details>
 <summary>Book Clubs and Study Groups</summary>
 
+<a href="https://kssocialistbookclub.com/home" target="_blank">Kansas Socialist Book Club<a>
+<a href="https://www.mlreadinghub.org/" target="_blank">Marxist-Leninist Reading Hub<a>
 
-
-[Kansas Socialist Book Club](https://kssocialistbookclub.com/home)
-
-[Marxist-Leninist Reading Hub](https://www.mlreadinghub.org/)
   
 </details>
 
@@ -32,14 +30,10 @@ Click the arrow to expand the list of resources.
 
    <summary> Free Online Courses </summary>
 
-   
-[Socialism 101](https://www.socialism101.com/)
+   <a href="https://www.socialism101.com/" target="_blank">Socialism 101<a>
+   <a href="https://online.hillsdale.edu/courses/promo/marxism-socialism-communism" target="_blank">Hillsdale College's Marxism, Socialism, and Communism Course<a>
+   <a href="https://www.edx.org/learn/communist-china/tsinghua-university-introduction-to-mao-zedong-thought-mao-ze-dong-si-xiang-gai-lun" target="_blank">TsinghuaX: Introduction to Mao Zedong Thought<a>
 
-[Hillsdale College's Marxism, Socialism, and Communism Course](https://online.hillsdale.edu/courses/promo/marxism-socialism-communism)
-
-[TsinghuaX: Introduction to Mao Zedong Thought](https://www.edx.org/learn/communist-china/tsinghua-university-introduction-to-mao-zedong-thought-mao-ze-dong-si-xiang-gai-lun)
-
-  
 </details>
 
 
@@ -49,12 +43,11 @@ Click the arrow to expand the list of resources.
 <details>
 <summary>Lectures</summary>
 
+ <a href="https://www.youtube.com/watch?v=y2iJLGI2AP4" target="_blank">Gabriel Rockhill, "Liberalism and Fascism: The State of American Politics"<a> (April 18, 2025, Kansas State University)
 
-[Gabriel Rockhill, "Liberalism and Fascism: The State of American Politics"](https://www.youtube.com/watch?v=y2iJLGI2AP4) (April 18, 2025, Kansas State University)
+  <a href="https://www.youtube.com/watch?v=Vnn_bWDmizw" target="_blank">Gabriel Rockhill, "Are Fascism and Liberalism Partners in Capitalist Crime?"<a> (January 28, 2024)
+   <a href="https://www.youtube.com/playlist?list=PLq-kUiXssVioxBWwToyN3Apqd8f_a7mCC" target="_blank">Marxism<a>(Youtube Lecture Series by Dr. Taimur Rahman)
 
-[Gabriel Rockhill, "Are Fascism and Liberalism Partners in Capitalist Crime?"](https://www.youtube.com/watch?v=Vnn_bWDmizw) (January 28, 2024)
-
-[Marxism](https://www.youtube.com/playlist?list=PLq-kUiXssVioxBWwToyN3Apqd8f_a7mCC) (Youtube Lecture Series by Dr. Taimur Rahman)
 
    
 </details>
@@ -63,20 +56,14 @@ Click the arrow to expand the list of resources.
 
 <summary>Reading Guides & Study Plans</summary>
 
-
-[Beginner's Guide to Marxism](https://www.marxists.org/subject/students/index.htm)
-
-[Introduction to Marxist Dialectics](https://www.github.com/flinthillsdsa/resrouces/learning-resrouces/literature/assets/marxistdialectics.md)
-
-[Marxism-Leninism-Maoism Basic Course](https://foreignlanguages.press/colorful-classics/marxism-leninism-maoism-basic-course-english/)
-
-[Basic Marx-Lenin Study Plan](https://www.github.com/flinthillsdsa/resrouces/learning-resrouces/literature/assets/marxleninbasics.md)
-
-[Marxism-Leninism Study Guide](https://marxistleninist.wordpress.com/study-guide/)
-
-[Revolutionary Communists of America reading guides for selected texts](https://communistusa.org/marxist-theory/reading-guides/)
-
-[From Marx to Mao](http://marx2mao.com/RG.html)
+ <a href="https://www.marxists.org/subject/students/index.htm" target="_blank">Beginner's Guide to Marxism<a>
+  <a href="../learning-resources/marxistdialectics" target="_blank">Introduction to Marxist Dialectics<a>
+   <a href="https://foreignlanguages.press/colorful-classics/marxism-leninism-maoism-basic-course-english/" target="_blank">Marxism-Leninism-Maoism Basic Course<a>
+    <a href="../learning-resources/marxleninbasics" target="_blank">Basic Marx-Lenin Study Plan<a>
+     <a href="https://marxistleninist.wordpress.com/study-guide/" target="_blank">Marxism-Leninism Study Guide<a>
+      <a href="https://communistusa.org/marxist-theory/reading-guides/" target="_blank">Revolutionary Communists of America reading guides for selected texts<a>
+       <a href="http://marx2mao.com/RG.html" target="_blank">From Marx to Mao<a>
+       
 
 </details>
 
