@@ -10,8 +10,8 @@ The Flint Hills Chapter of Democratic Socialists of America is guided by sociali
 
 <div align="center">
  <a class="btn btn-primary btn-xl text-uppercase" href="../governing-documents/bylaws">Bylaws</a>
- 
+ <br>
   <a class="btn btn-primary btn-xl text-uppercase" href="../governing-documents/">Political Framework</a>
-  
+  <br>
   <a class="btn btn-primary btn-xl text-uppercase" href="../governing-documents/">Code of Conduct</a>
 </div>
