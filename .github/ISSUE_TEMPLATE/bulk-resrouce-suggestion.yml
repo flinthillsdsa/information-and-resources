@@ -1,0 +1,198 @@
+name: 📚 Bulk Resource Suggestion
+description: Suggest multiple educational resources at once
+title: "[BULK-RESOURCES] "
+labels: ["resource", "education", "needs-review", "bulk-submission"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📚 Bulk Resource Suggestion
+        Use this template to suggest multiple educational resources at once. Please organize them by category for easier processing.
+        
+        **Format for each resource:**
+        ```
+        **Title:** Resource Name
+        **Author/Creator:** Who made it
+        **Link:** https://example.com
+        **Type:** Book/Article/Video/etc.
+        **Description:** Brief description
+        **Why recommend:** Why it's valuable
+        ```
+        
+  - type: input
+    id: submitter_info
+    attributes:
+      label: Your Information
+      description: Who is submitting these resources?
+      placeholder: "Your name/username and any relevant background (optional)"
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: submission_theme
+    attributes:
+      label: Submission Theme
+      description: Do these resources have a common theme?
+      options:
+        - Mixed Collection
+        - Beginner Socialism Resources
+        - Advanced Theory
+        - Labor Organizing Focus
+        - Housing Justice Focus
+        - Electoral Politics
+        - Local Kansas/Regional Focus
+        - Anti-Racism/Social Justice
+        - Climate Justice
+        - International Solidarity
+        - Mutual Aid/Community Building
+        - Historical Materials
+        - Current Events/Analysis
+        - Creative/Cultural Resources
+        - Other Theme
+    validations:
+      required: true
+
+  - type: textarea
+    id: books
+    attributes:
+      label: 📖 Books
+      description: List book recommendations (if any)
+      placeholder: |
+        **Title:** The ABCs of Socialism
+        **Author/Creator:** Jacobin Magazine
+        **Link:** https://example.com
+        **Description:** Accessible introduction to socialist concepts
+        **Why recommend:** Great for new members, covers basics clearly
+        
+        **Title:** Another Book
+        **Author/Creator:** Author Name
+        **Link:** https://example.com
+        **Description:** Description here
+        **Why recommend:** Reason here
+    validations:
+      required: false
+      
+  - type: textarea
+    id: articles_essays
+    attributes:
+      label: 📄 Articles & Essays
+      description: List article/essay recommendations (if any)
+      placeholder: |
+        **Title:** Article Title
+        **Author/Creator:** Author Name
+        **Link:** https://example.com
+        **Description:** What the article covers
+        **Why recommend:** Why it's valuable for our chapter
+    validations:
+      required: false
+      
+  - type: textarea
+    id: videos_documentaries
+    attributes:
+      label: 🎥 Videos & Documentaries
+      description: List video/documentary recommendations (if any)
+      placeholder: |
+        **Title:** Video Title
+        **Author/Creator:** Creator/Channel
+        **Link:** https://youtube.com/watch?v=example
+        **Description:** What the video covers
+        **Why recommend:** Why it's valuable
+        **Length:** Duration (if known)
+    validations:
+      required: false
+      
+  - type: textarea
+    id: podcasts_audio
+    attributes:
+      label: 🎧 Podcasts & Audio
+      description: List podcast/audio recommendations (if any)
+      placeholder: |
+        **Title:** Podcast Name or Episode Title
+        **Author/Creator:** Podcast Host(s)
+        **Link:** https://example.com
+        **Description:** What it covers
+        **Why recommend:** Why it's valuable
+        **Length:** Duration (if known)
+    validations:
+      required: false
+      
+  - type: textarea
+    id: websites_tools
+    attributes:
+      label: 🌐 Websites & Online Tools
+      description: List website/tool recommendations (if any)
+      placeholder: |
+        **Title:** Website/Tool Name
+        **Author/Creator:** Organization/Creator
+        **Link:** https://example.com
+        **Description:** What it offers
+        **Why recommend:** How it helps organizing/education
+        **Cost:** Free/Paid/Mixed
+    validations:
+      required: false
+      
+  - type: textarea
+    id: academic_papers
+    attributes:
+      label: 🎓 Academic Papers & Journals
+      description: List academic resource recommendations (if any)
+      placeholder: |
+        **Title:** Paper/Journal Title
+        **Author/Creator:** Academic Author(s)
+        **Link:** https://example.com (or citation if no link)
+        **Description:** Research focus/findings
+        **Why recommend:** Relevance to our work
+        **Access:** Free/Paywall/Library Access
+    validations:
+      required: false
+      
+  - type: textarea
+    id: organizing_materials
+    attributes:
+      label: 🛠️ Organizing Toolkits & Handbooks
+      description: List practical organizing resource recommendations (if any)
+      placeholder: |
+        **Title:** Toolkit/Handbook Name
+        **Author/Creator:** Organization/Author
+        **Link:** https://example.com
+        **Description:** What organizing skills/strategies it covers
+        **Why recommend:** How it applies to our campaigns
+        **Format:** PDF/Website/Physical book
+    validations:
+      required: false
+      
+  - type: textarea
+    id: other_resources
+    attributes:
+      label: 🎨 Other Resources
+      description: Anything else that doesn't fit the above categories
+      placeholder: |
+        **Title:** Resource Name
+        **Author/Creator:** Creator
+        **Link:** https://example.com
+        **Type:** Infographic/Game/App/etc.
+        **Description:** What it is
+        **Why recommend:** Why it's valuable
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: processing_preferences
+    attributes:
+      label: Processing Preferences
+      description: How should we handle this bulk submission?
+      options:
+        - label: Create separate issues for each resource (easier to track individually)
+        - label: Process as one batch (faster but less detailed tracking)
+        - label: Prioritize certain categories first (specify in comments)
+        - label: I can help process/categorize these resources
+        
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: Additional Notes
+      description: Any other context, sources, or notes about these resources?
+      placeholder: "Where did you find these? Any special context? Difficulty levels? Target audiences?"
+    validations:
+      required: false

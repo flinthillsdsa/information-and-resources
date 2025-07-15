@@ -1,0 +1,138 @@
+name: 📚 Resource Suggestion
+description: Suggest a single educational resources for the chapter library (use Bulk Resource Suggestion if you have multiple resources to suggest).
+title: "[RESOURCE] "
+labels: ["resource", "education", "needs-review"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📚 Resource Suggestion
+        Use this template to suggest books, articles, videos, or other educational materials for our chapter's resource collection.
+        
+  - type: dropdown
+    id: resource_type
+    attributes:
+      label: Type of Resource
+      description: What kind of resource is this?
+      options:
+        - Book
+        - Article/Essay
+        - Video/Documentary
+        - Podcast/Audio
+        - Website/Online Tool
+        - Academic Paper
+        - Infographic/Visual
+        - Course/Workshop
+        - Other
+    validations:
+      required: true
+      
+  - type: input
+    id: resource_title
+    attributes:
+      label: Resource Title
+      description: What is the title of this resource?
+      placeholder: "e.g., 'The ABCs of Socialism', 'Why Socialism?' by Einstein"
+    validations:
+      required: true
+      
+  - type: input
+    id: author_creator
+    attributes:
+      label: Author/Creator
+      description: Who created this resource?
+      placeholder: "e.g., Jacobin Magazine, Richard Wolff, DSA National"
+    validations:
+      required: true
+      
+  - type: input
+    id: resource_link
+    attributes:
+      label: Link/URL
+      description: Where can this resource be found?
+      placeholder: "https://..."
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: topic_category
+    attributes:
+      label: Primary Directory/Topic
+      description: Which educational-resources directory does this belong in?
+      options:
+        - books
+        - blogs
+        - videos
+        - podcasts
+        - films-and-documentaries
+        - newsletters-and-email-briefings
+        - comics-and-graphic-novels
+        - organizing-toolkits-and-handbooks
+        - social-media-accounts
+        - academic-articles-and-journals
+        - data-sets-and-visualization-dashboards
+        - infographics-and-visual-explainers
+        - audiobooks-and-lecture-series
+        - zines-and-pamphlets
+        - glossaries-and-terminology-guides
+        - study-guides-and-syllabi
+        - art-music-and-protest-playlists
+        - case-studies-and-campaign-timelines
+        - workshops-and-webinar-recordings
+        - primary-source-archives
+        - interactive-games-and-simulations
+        - Other/Unsure
+      
+  - type: textarea
+    id: resource_description
+    attributes:
+      label: Description
+      description: Briefly describe what this resource covers
+      placeholder: "What topics does it address? Why is it valuable for DSA members?"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: difficulty_level
+    attributes:
+      label: Difficulty Level
+      description: How accessible is this resource?
+      options:
+        - Beginner - New to socialism/organizing
+        - Intermediate - Some background knowledge helpful
+        - Advanced - Requires significant prior knowledge
+        - All Levels
+    validations:
+      required: true
+      
+  - type: input
+    id: time_commitment
+    attributes:
+      label: Time Commitment
+      description: How long does it take to consume this resource?
+      placeholder: "e.g., 15 minutes, 2 hours, 300 pages"
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: resource_format
+    attributes:
+      label: Format Details
+      description: Additional format information
+      options:
+        - label: Free/Open Access
+        - label: Requires Purchase
+        - label: Available at Library
+        - label: Good for Book Club
+        - label: Good for Study Group
+        - label: Suitable for New Members
+        
+  - type: textarea
+    id: why_recommend
+    attributes:
+      label: Why Recommend This?
+      description: Why should our chapter include this resource?
+      placeholder: "How does this support our education goals or current campaigns?"
+    validations:
+      required: true
