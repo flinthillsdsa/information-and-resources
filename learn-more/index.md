@@ -17,9 +17,7 @@ We are guided by our socialist principles in everything we do, from generating i
  <br>
   <a class="btn btn-primary btn-xl text-uppercase" href="../governing-documents/">Code of Conduct</a>
 </div>
-  <br>
- <br>
-
+  
 ## Working Groups
 
 Our working groups center their labor toward organizing around three stategic imperatives:
