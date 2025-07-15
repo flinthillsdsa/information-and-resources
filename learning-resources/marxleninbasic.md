@@ -80,5 +80,4 @@ description: "Translated and annotated reading list with free, English-language 
 > — *V. I. Lenin*
 
 ---
-
-*Last updated: <!-- YYYY-MM-DD -->*.  Kindly [open an issue](../../issues) for corrections or suggestions. **Solidarity and good reading!**
+  **Solidarity and good reading!**
