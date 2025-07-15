@@ -6,10 +6,11 @@ background: grey
 
 # Learning Resources Repository
 
+Click the arrow to expand the list of resources.
+
 <details>
 <summary>Archival Materials</summary>
 
-<br>
 
 [Lady Izdihar's Soviet Archive](https://ladyizdihar.com/)
 
@@ -18,7 +19,7 @@ background: grey
 <details>
 <summary>Book Clubs and Study Groups</summary>
 
-<br>
+
 
 [Kansas Socialist Book Club](https://kssocialistbookclub.com/home)
 
@@ -30,7 +31,7 @@ background: grey
 <details>
 
    <summary> Free Online Courses </summary>
-   <br>
+
    
 [Socialism 101](https://www.socialism101.com/)
 
@@ -47,7 +48,7 @@ background: grey
 
 <details>
 <summary>Lectures</summary>
-<br>
+
 
 [Gabriel Rockhill, "Liberalism and Fascism: The State of American Politics"](https://www.youtube.com/watch?v=y2iJLGI2AP4) (April 18, 2025, Kansas State University)
 
@@ -61,7 +62,7 @@ background: grey
 <details>
 
 <summary>Reading Guides & Study Plans</summary>
-<br>
+
 
 [Beginner's Guide to Marxism](https://www.marxists.org/subject/students/index.htm)
 
