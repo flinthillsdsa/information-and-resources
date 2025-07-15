@@ -3,62 +3,79 @@ layout: page
 title: "Learning Resources Repository"
 background: grey
 ---
-# Socialism in a Nutshell 
 
-Socialism is the idea that **ordinary people should run the economy and government together, instead of a small group of owners or politicians calling all the shots**. In practice, that means:
+# Learning Resources Repository
 
-1. **Shared control of big decisions**  
-   Factories, banks, and other key services are managed democratically—workers and communities vote on what gets made, how it’s made, and how the benefits are used.
+<details>
+<summary>Archival Materials</summary>
 
-2. **Fairness over profit**  
-   The main goal is to meet everyone’s needs—decent jobs, housing, healthcare, and education—rather than maximizing money for a few shareholders.
+<br>
+[Lady Izdihar's Soviet Archive](https://ladyizdihar.com/)
 
-3. **Working together, not against each other**  
-   Cooperation replaces cut-throat competition. Success is measured by how well everyone does, not by how rich one person can get.
+   
+</details>
+<details>
+<summary>Book Clubs and Study Groups</summary>
 
-4. **Equality and dignity for all**  
-   Socialists aim to break down barriers of race, gender, ability, and nationality so no one is left out or exploited.
+<br>
 
-5. **Care for the planet**  
-   Production is planned to protect the environment for future generations, instead of burning through resources for quick profits.
+[Kansas Socialist Book Club](https://kssocialistbookclub.com/home)
 
-**Put simply: Socialism is about people teaming up to run society in a fair, democratic, and sustainable way—so everyone can live a decent life.**
+[Marxist-Leninist Reading Hub](https://www.mlreadinghub.org/)
+  
+</details>
 
-## Core Commitments
-- **Democracy:** Working people collectively decide how resources are produced and distributed.  
-- **Equality & Solidarity:** Aiming to eradicate exploitative class relations, oppression, and systemic hierarchies.  
-- **Sustainability:** Stewardship of the planet for present and future generations.  
 
-# Major Branches of Socialist Thought
-| Branch | Key Ideas | Classic Thinkers / Movements |
-|--------|-----------|-----------------------------|
-| **Marxist (Scientific) Socialism** | Historical materialism; class struggle as engine of change. | Karl Marx, Friedrich Engels |
-| **Marxism–Leninism** | Vanguard parties, anti-imperialism, transition via a workers’ state. | V. I. Lenin, Ho Chi Minh, Angela Davis |
-| **Democratic Socialism** | Multi-party democracy + socialized industry; reforms as steps toward socialism. | Rosa Luxemburg, Michael Harrington, DSA |
-| **Libertarian / Anarchist Socialisms** | Stateless, non-hierarchical communes and federations. | Mikhail Bakunin, Emma Goldman |
-| **Syndicalism & Council Communism** | Worker-run unions and councils directly manage production. | Industrial Workers of the World, Anton Pannekoek |
-| **Eco-Socialism** | Centering ecological limits and climate justice within socialist analysis. | Murray Bookchin, Vandana Shiva |
-| **Feminist & Queer Socialisms** | Liberation from patriarchy and heteronormativity as inseparable from class struggle. | Alexandra Kollontai, Silvia Federici |
+<details>
 
-*(Note: Many activists and organizations blend elements from several of these currents.)*
+   <summary> Free Online Courses </summary>
+   <br>
+[Socialism 101](https://www.socialism101.com/)
 
-# Related Political Systems
-| System | Relationship to Socialism |
-|--------|--------------------------|
-| **Social Democracy** | Implements robust welfare states and labor protections within capitalism; often a gateway to socialist ideas. |
-| **Welfare Capitalism** | Expands safety nets without challenging private ownership; may blunt, but not abolish, exploitation. |
-| **State Capitalism** | State owns key firms yet operates them on profit principles; critics argue it retains class structures. |
-| **Participatory Economics (Parecon)** | Non-Marxist model proposing worker & consumer councils with balanced job complexes. |
+[Hillsdale College's Marxism, Socialism, and Communism Course](https://online.hillsdale.edu/courses/promo/marxism-socialism-communism)
 
-# Communism: The Horizon
-In Marxist terms, **communism** is the end-state toward which socialist movements strive:  
-- **Classless & Stateless:** No exploiting class, no coercive state apparatus.  
-- **From Each According to Ability, To Each According to Need:** Distribution based on human need rather than market exchange.  
-- **Full Human Development:** With material scarcity overcome, people freely pursue creative, social, and intellectual activities.
+[TsinghuaX: Introduction to Mao Zedong Thought](https://www.edx.org/learn/communist-china/tsinghua-university-introduction-to-mao-zedong-thought-mao-ze-dong-si-xiang-gai-lun)
 
-*Socialism is thus the transitional process (and set of institutions) that dismantles capitalist relations while preparing society for communism.*
+  
+</details>
 
-**Ready to dive deeper? Click the Browse button below to brows the repository.**
+
+
+
+
+<details>
+<summary>Lectures</summary>
+<br>
+
+[Gabriel Rockhill, "Liberalism and Fascism: The State of American Politics"](https://www.youtube.com/watch?v=y2iJLGI2AP4) (April 18, 2025, Kansas State University)
+
+[Gabriel Rockhill, "Are Fascism and Liberalism Partners in Capitalist Crime?"](https://www.youtube.com/watch?v=Vnn_bWDmizw) (January 28, 2024)
+
+[Marxism](https://www.youtube.com/playlist?list=PLq-kUiXssVioxBWwToyN3Apqd8f_a7mCC) (Youtube Lecture Series by Dr. Taimur Rahman)
+
+   
+</details>
+
+<details>
+
+<summary>Reading Guides & Study Plans</summary>
+<br>
+
+[Beginner's Guide to Marxism](https://www.marxists.org/subject/students/index.htm)
+
+[Introduction to Marxist Dialectics](https://www.github.com/flinthillsdsa/resrouces/learning-resrouces/literature/assets/marxistdialectics.md)
+
+[Marxism-Leninism-Maoism Basic Course](https://foreignlanguages.press/colorful-classics/marxism-leninism-maoism-basic-course-english/)
+
+[Basic Marx-Lenin Study Plan](https://www.github.com/flinthillsdsa/resrouces/learning-resrouces/literature/assets/marxleninbasics.md)
+
+[Marxism-Leninism Study Guide](https://marxistleninist.wordpress.com/study-guide/)
+
+[Revolutionary Communists of America reading guides for selected texts](https://communistusa.org/marxist-theory/reading-guides/)
+
+[From Marx to Mao](http://marx2mao.com/RG.html)
+
+</details>
 
 ---
 
