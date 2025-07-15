@@ -10,6 +10,7 @@ background: grey
 <summary>Archival Materials</summary>
 
 <br>
+
 [Lady Izdihar's Soviet Archive](https://ladyizdihar.com/)
 
    
@@ -30,6 +31,7 @@ background: grey
 
    <summary> Free Online Courses </summary>
    <br>
+   
 [Socialism 101](https://www.socialism101.com/)
 
 [Hillsdale College's Marxism, Socialism, and Communism Course](https://online.hillsdale.edu/courses/promo/marxism-socialism-communism)
