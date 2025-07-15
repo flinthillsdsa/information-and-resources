@@ -8,14 +8,14 @@ background: grey
 Click the arrow to expand the list of resources.
 
 <details markdown="1">
-<summary>Archival Materials</summary>
+<summary markdown="span">**Archival Materials88</summary>
 
 - [Lady Izdihar's Soviet Archive](https://ladyizdihar.com/){:target="_blank"}
    
 </details>
 
 <details markdown="1">
-<summary>Book Clubs and Study Groups</summary>
+<summary markdown="span">**Book Clubs and Study Groups**</summary>
 
 - [Kansas Socialist Book Club](https://kssocialistbookclub.com/home){:target="_blank"}
 - [Marxist-Leninist Reading Hub](https://www.mlreadinghub.org/){:target="_blank"}
@@ -23,7 +23,7 @@ Click the arrow to expand the list of resources.
 </details>
 
 <details markdown="1">
-<summary>Free Online Courses</summary>
+<summary markdown="span">**Free Online Courses**</summary>
 
 - [Socialism 101](https://www.socialism101.com/){:target="_blank"}
 - [Hillsdale College's Marxism, Socialism, and Communism Course](https://online.hillsdale.edu/courses/promo/marxism-socialism-communism){:target="_blank"}
@@ -32,7 +32,7 @@ Click the arrow to expand the list of resources.
 </details>
 
 <details markdown="1">
-<summary>Lectures</summary>
+<summary markdown="span">**Lectures**</summary>
 
 - [Gabriel Rockhill, "Liberalism and Fascism: The State of American Politics"](https://www.youtube.com/watch?v=y2iJLGI2AP4){:target="_blank"} (April 18, 2025, Kansas State University)
 - [Gabriel Rockhill, "Are Fascism and Liberalism Partners in Capitalist Crime?"](https://www.youtube.com/watch?v=Vnn_bWDmizw){:target="_blank"} (January 28, 2024)
@@ -41,12 +41,12 @@ Click the arrow to expand the list of resources.
 </details>
 
 <details markdown="1">
-<summary>Podcasts</summary>
+<summary markdown="span">**Podcasts**</summary>
 
 > **How to use this list**  
 > Start with the topic that grabs you—then sample a few shows to find the tone and depth you like. Many release bonus content on Patreon; the links below all point to free public feeds.
 
-#### Theory & Philosophy
+**Theory & Philosophy**
 - [What's Left of Philosophy](https://www.leftofphilosophy.com/){:target="_blank"}
 - [Theory & Philosophy](https://theoretician.podbean.com/){:target="_blank"}
 - [Why Theory](https://podcasts.apple.com/us/podcast/why-theory/id1299863834){:target="_blank"}
@@ -55,14 +55,14 @@ Click the arrow to expand the list of resources.
 - [Red Menace](https://redmenace.libsyn.com/){:target="_blank"}
 - [Red Library](https://redlibrary.libsyn.com/){:target="_blank"}
 
-##### Post-structural / Critical Theory
+***Post-structural / Critical Theory***
 - [Acid Horizon](https://www.acidhorizonpodcast.com/){:target="_blank"}
 - [Machinic Unconscious Happy Hour](https://podcasts.apple.com/us/podcast/machinic-unconscious-happy-hour/id1234384916){:target="_blank"}
 - [Žižek & So On](https://open.spotify.com/show/5zMFV8I4HQRKHUoqW2O3db){:target="_blank"}
 - [Lost Futures: A Mark Fisher Podcast](https://open.spotify.com/show/0EnwNGZijCDZVIl5JtjwGT){:target="_blank"}
 - [Deleuze & Guattari Quarantine Collective](https://open.spotify.com/show/5A4fvYbVTuCxVLnnrofTcR){:target="_blank"}
 
-#### History
+**History**
 - [Guerrilla History](https://guerrillahistory.libsyn.com/){:target="_blank"}
 - [Fourth Reich Archaeology](https://open.spotify.com/show/1DxF75sQhiSyvSUgoqsnqA){:target="_blank"}
 - [Labor Jawn](https://www.laborjawn.com/){:target="_blank"}
@@ -75,7 +75,7 @@ Click the arrow to expand the list of resources.
 - [Lions Led By Donkeys](https://open.spotify.com/show/1Vw8AeyqBCI6R94FK3GBw9){:target="_blank"}
 - [What A Hell of a Way to Die](https://open.spotify.com/show/1XEfRCDbLKOB8naNbICU6q){:target="_blank"}
 
-#### Current Events & Commentary
+**Current Events & Commentary**
 - [Upstream](https://www.upstreampodcast.org/){:target="_blank"}
 - [Revolutionary Left Radio](https://revolutionaryleftradio.libsyn.com/){:target="_blank"}
 - [Party Girls](https://open.spotify.com/show/71ESqg33NRlEPmDxjbg4rO){:target="_blank"}
@@ -92,7 +92,7 @@ Click the arrow to expand the list of resources.
 - [Citations Needed](https://citationsneeded.libsyn.com/){:target="_blank"}
 - [Democracy Now!](https://www.democracynow.org/pages/help/podcasting){:target="_blank"} *(daily news)*
 
-#### Culture, Comedy & Pop-Ed
+**Culture, Comedy & Pop-Ed**
 - [If Books Could Kill](https://podcasts.apple.com/us/podcast/if-books-could-kill/id1651876897){:target="_blank"}
 - [Behind the Bastards](https://www.iheart.com/podcast/105-behind-the-bastards-29236323/){:target="_blank"}
 - [It Could Happen Here](https://www.iheart.com/podcast/105-it-could-happen-here-30717896/){:target="_blank"}
@@ -101,33 +101,33 @@ Click the arrow to expand the list of resources.
 - [The Blindboy Podcast](https://shows.acast.com/blindboy){:target="_blank"}
 - [The Alexei Sayle Podcast](https://audioboom.com/channels/5038428-the-alexei-sayle-podcast){:target="_blank"}
 
-#### Ecology & Tech
+**Ecology & Tech**
 - [Poor Prole's Almanac](https://podcasts.apple.com/us/podcast/the-poor-proles-almanac/id1523042499){:target="_blank"}
 - [Tech Won't Save Us](https://techwontsave.us/){:target="_blank"}
 
-#### Anti-Fascism / Security
+**Anti-Fascism / Security**
 - [Live Like the World Is Dying](https://www.liveliketheworldisdying.com/){:target="_blank"}
 - [I Don't Speak German](https://podcasts.apple.com/us/podcast/i-dont-speak-german/id1449848509){:target="_blank"}
 - [Hood Politics](https://www.iheart.com/podcast/1119-hood-politics-with-prop-81527703/){:target="_blank"}
 
-#### True-Crime / Politics Hybrid
+**True-Crime / Politics Hybrid**
 - [Sunder](https://podcasts.apple.com/us/podcast/sunder/id1650059141){:target="_blank"} *(sporadic)*
 - [Real Dictators](https://www.noiser.com/real-dictators){:target="_blank"}
 
-#### Movement Media & Interview Shows
+**Movement Media & Interview Shows**
 - [Green and Red](https://greenandredpodcast.org/){:target="_blank"}
 - [Millennials Are Killing Capitalism](https://millennialsarekillingcapitalism.libsyn.com/){:target="_blank"}
 - [The Antifada](https://podcasts.apple.com/us/podcast/the-antifada/id1372879721){:target="_blank"}
 - [Aufhebunga Bunga](https://bungacast.com/){:target="_blank"}
 - [Poor Prole's Almanac](https://podcasts.apple.com/us/podcast/the-poor-proles-almanac/id1523042499){:target="_blank"} *(listed above under Ecology)*
 
-#### Misc. / Edge Picks
+**Misc. / Edge Picks**
 - [Conspirituality](https://www.conspirituality.net/){:target="_blank"} *(critiquing New-Age conspiracies)*
 
 </details>
 
 <details markdown="1">
-<summary>Reading Guides & Study Plans</summary>
+<summary markdown="span">**Reading Guides & Study Plans**</summary>
 
 - [Beginner's Guide to Marxism](https://www.marxists.org/subject/students/index.htm){:target="_blank"}
 - [Introduction to Marxist Dialectics](../learning-resources/marxistdialectics){:target="_blank"}
