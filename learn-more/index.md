@@ -11,7 +11,17 @@ The Flint Hills Chapter of Democratic Socialists of America is guided by sociali
 <div align="center">
  <a class="btn btn-primary btn-xl text-uppercase" href="../governing-documents/bylaws">Bylaws</a>
  <br>
+ <br>
   <a class="btn btn-primary btn-xl text-uppercase" href="../governing-documents/">Political Framework</a>
   <br>
+ <br>
   <a class="btn btn-primary btn-xl text-uppercase" href="../governing-documents/">Code of Conduct</a>
+</div>
+
+## Education
+
+The Flint Hills Chapter of Democratic Socialists of America value education and believe it is a public good.  We hold the belief that knowledge and information should be accessible and readily available to everyone. If you are interested in learning more about socialism, we are building a living repository of free educational resources to help you learn more about socialism and the many ways we can all work toward collective libreration. 
+
+<div align="center">
+ <a class="btn btn-primary btn-xl text-uppercase" href="../learning-resources">Learning Resources Repository</a>
 </div>
