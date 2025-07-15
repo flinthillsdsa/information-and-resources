@@ -132,7 +132,7 @@ Click the arrow to expand the list of resources.
 - [Beginner's Guide to Marxism](https://www.marxists.org/subject/students/index.htm){:target="_blank"}
 - [Introduction to Marxist Dialectics](../learning-resources/marxistdialectics){:target="_blank"}
 - [Marxism-Leninism-Maoism Basic Course](https://foreignlanguages.press/colorful-classics/marxism-leninism-maoism-basic-course-english/){:target="_blank"}
-- [Basic Marx-Lenin Study Plan](../learning-resources/marxleninbasics){:target="_blank"}
+- [Basic Marx-Lenin Study Plan](../learning-resources/marxleninbasic){:target="_blank"}
 - [Marxism-Leninism Study Guide](https://marxistleninist.wordpress.com/study-guide/){:target="_blank"}
 - [Revolutionary Communists of America reading guides for selected texts](https://communistusa.org/marxist-theory/reading-guides/){:target="_blank"}
 - [From Marx to Mao](http://marx2mao.com/RG.html){:target="_blank"}
