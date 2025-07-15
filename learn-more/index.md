@@ -6,7 +6,7 @@ background: grey
 
 ## Our Governing Principles
 
-The Flint Hills Chapter of Democratic Socialists of America is guided by socialist principles in everything we do, from generating ideas, making decisions, organizaing, mobilizing, and taking action. The following documents outline the Bylaws, Political Framework, and Code of Conduct for the ogranization and its members.
+We are guided by our socialist principles in everything we do, from generating ideas, making decisions, organizaing, mobilizing, and taking action. The following documents outline the Bylaws, Political Framework, and Code of Conduct for the ogranization and its members.
 
 <div align="center">
  <a class="btn btn-primary btn-xl text-uppercase" href="../governing-documents/bylaws">Bylaws</a>
@@ -22,11 +22,17 @@ The Flint Hills Chapter of Democratic Socialists of America is guided by sociali
 
 ## Working Groups
 
+Our working groups center their labor toward organizing around three stategic imperatives:
 
+        <ul>
+          <li><b>Housing Justice</b>, by supporting and organizing around the mission and goals of Renters Together MHK.</li>
+          <li><b>Palestine Solidarity</b>, through anti-genocide and anti-war awareness-raising and education, and through the <a href="https://bdsmovement.net/" target="_blank">Boycott, Divest, and Sanction Movement</a>.</li>
+          <li><b>Immigrant Community Advocacy</b>, by advancing local "sanctuary" policy and securing a Memorandum of Non-Cooperation by county law-enforcement and expanding mutual-aid & legal-defense fund in tandem with immigrant-led partners.</li>
+        </ul>
  
 ## Education
 
-The Flint Hills Chapter of Democratic Socialists of America value education and believe it is a public good.  We hold the belief that knowledge and information should be accessible and readily available to everyone. If you are interested in learning more about socialism, we are building a living repository of free educational resources to help you learn more about socialism and the many ways we can all work toward collective libreration. 
+We value education and believe it is a public good.  We hold the belief that knowledge and information should be accessible and readily available to everyone. If you are interested in learning more about socialism, we are building a living repository of free educational resources to help you learn more about socialism and the many ways we can all work toward collective libreration. 
 
 <div align="center">
  <a class="btn btn-primary btn-xl text-uppercase" href="../learning-resources">Learning Resources Repository</a>
