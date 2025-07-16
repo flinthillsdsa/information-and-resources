@@ -24,7 +24,6 @@ en: &DEFAULT_EN
 
   about:
     title: "About Us"
-    text: "our story"
     body: |
       <div style="text-align: left; max-width: 90%; margin: 0 auto;">
         <h3>Flint Hills Chapter of Democratic Socialists of America</h3>
