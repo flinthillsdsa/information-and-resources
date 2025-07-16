@@ -24,7 +24,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 title      : Flint Hills DSA
 email      : chapter@fhdsa.org #this is also the email contact forms will go to
-description: "The officla site for the Flint Hills Chapter of Democratic Socialists of America "
+description: "The official website for the Flint Hills Chapter of Democratic Socialists of America "
 author     : Your Name
 logo:
   path  : "/assets/img/fhdsalogo.png"
