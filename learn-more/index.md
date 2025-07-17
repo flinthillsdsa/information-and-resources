@@ -12,10 +12,10 @@ We are guided by our socialist principles in everything we do, from generating i
  <a class="btn btn-primary btn-xl text-uppercase" href="../governing-documents/bylaws">Bylaws</a>
  <br>
  <br>
-  <a class="btn btn-primary btn-xl text-uppercase" href="../governing-documents/">Political Framework</a>
+  <a class="btn btn-primary btn-xl text-uppercase" href="../governing-documents/framework">Political Framework</a>
   <br>
  <br>
-  <a class="btn btn-primary btn-xl text-uppercase" href="../governing-documents/">Code of Conduct</a>
+  <a class="btn btn-primary btn-xl text-uppercase" href="../governing-documents/code">Code of Conduct</a>
 </div>
   
 ## Working Groups
