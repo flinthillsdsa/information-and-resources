@@ -140,4 +140,4 @@ Click the arrow to expand the list of resources.
 </details>
 
 ---
-*Have a learning resource suggestion? [Submit it here](https://www.fhdsa.org/learning-resources/){:target="_blank"}. Solidarity and happy studying!*
+*Have a learning resource suggestion? [Submit it here](https://www.fhdsa.org/form/learning-resources/){:target="_blank"}. Solidarity and happy studying!*
