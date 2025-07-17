@@ -6,7 +6,7 @@ background: grey
 
 
 
-# 2025-07-24 Chapter Meeting Agenda [DRAFT]
+# 2025-07-24 Chapter Meeting Agenda 
 ## Flint Hills DSA
 
 **Date:** July 24, 2025,
