@@ -140,4 +140,4 @@ Click the arrow to expand the list of resources.
 </details>
 
 ---
-*If you have a GitHub account, you may open an [issue](https://github.com/flinthillsdsa/information-and-resources/issues){:target="_blank"} to suggest additional resources. Solidarity and happy studying!*
+*Have a learning resource suggestion? [Submit it here](https://www.fhdsa.org/learning-resources/){:target="_blank"}. Solidarity and happy studying!*
