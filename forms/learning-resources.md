@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Learning Resources Suggestion"
