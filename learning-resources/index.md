@@ -136,6 +136,7 @@ Click the arrow to expand the list of resources.
 - [Marxism-Leninism Study Guide](https://marxistleninist.wordpress.com/study-guide/){:target="_blank"}
 - [Revolutionary Communists of America reading guides for selected texts](https://communistusa.org/marxist-theory/reading-guides/){:target="_blank"}
 - [From Marx to Mao](http://marx2mao.com/RG.html){:target="_blank"}
+- [Massline.info](http://www.massline.info){:target="_blank"}
 
 </details>
 
