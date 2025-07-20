@@ -27,5 +27,5 @@ Our working groups center their labor toward organizing around three stategic im
 We value education and believe it is a public good.  We hold the belief that knowledge and information should be accessible and readily available to everyone. If you are interested in learning more about socialism, we are building a living repository of free educational resources to help you learn more about socialism and the many ways we can all work toward collective libreration. 
 
 <div align="center">
- <a class="btn btn-primary btn-xl text-uppercase" href="../learning-resources">Learning Resources Repository</a>
+ <a class="btn btn-primary btn-xl text-uppercase" href="https://docs.google.com/spreadsheets/d/1UhcOmQ14tAISV51bSAh8O6FOteB_BCawZncnGDi68Qg/edit?usp=sharing"  target="_blank">Learning Resources Repository</a>
 </div>
