@@ -28,16 +28,16 @@ background: grey
 ### 2025-26 Steering-Committee Election Results
 
 - Co-chairs
- - Noah Rude
- - Peter Herrmann
+  - Noah Rude
+  - Peter Herrmann
 - Treasurer
- - Steve Steinman
+  - Steve Steinman
 - Co-Members Coordinators
- - Beccah Bromley
- - Amanda Crisp
+  - Beccah Bromley
+  - Amanda Crisp
 - Co-Secretaries
- - Andrew Govea
- - Derron Borders    
+  - Andrew Govea
+  - Derron Borders    
 <br>
 
 ## IV. Committee & Working Group Reports
